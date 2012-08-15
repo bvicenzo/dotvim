@@ -1,5 +1,7 @@
 tmp/*
 backup/*
+!tmp/empty_tmp
+!backup/empty_backup
 .netrwhist
 *.log
 *.so
