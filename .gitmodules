@@ -1,0 +1,81 @@
+[submodule "bundle/ack"]
+	path = bundle/ack
+	url = git://github.com/vim-scripts/ack.vim.git
+[submodule "bundle/nerdtree"]
+	path = bundle/nerdtree
+	url = https://github.com/scrooloose/nerdtree.git
+[submodule "bundle/command-t"]
+	path = bundle/command-t
+	url = https://github.com/vim-scripts/Command-T.git
+[submodule "bundle/taglist"]
+	path = bundle/taglist
+	url = https://github.com/vim-scripts/taglist.vim.git
+[submodule "bundle/html5"]
+	path = bundle/html5
+	url = https://github.com/kaihendry/vim-html5.git
+[submodule "bundle/tabular"]
+	path = bundle/tabular
+	url = https://github.com/godlygeek/tabular.git
+[submodule "bundle/eruby"]
+	path = bundle/eruby
+	url = https://github.com/vim-scripts/eruby.vim.git
+[submodule "bundle/syntastic"]
+	path = bundle/syntastic
+	url = https://github.com/vim-scripts/Syntastic.git
+[submodule "bundle/fugitive"]
+	path = bundle/fugitive
+	url = git://github.com/tpope/vim-fugitive.git
+[submodule "bundle/nerdcommenter"]
+	path = bundle/nerdcommenter
+	url = https://github.com/scrooloose/nerdcommenter.git
+[submodule "bundle/autotag"]
+	path = bundle/autotag
+	url = https://github.com/vim-scripts/AutoTag.git
+[submodule "bundle/bufexplorer"]
+	path = bundle/bufexplorer
+	url = https://github.com/corntrace/bufexplorer.git
+[submodule "bundle/endwise"]
+	path = bundle/endwise
+	url = https://github.com/vim-scripts/endwise.vim.git
+[submodule "bundle/kwbdi"]
+	path = bundle/kwbdi
+	url = https://github.com/vim-scripts/kwbdi.vim.git
+[submodule "bundle/matchit"]
+	path = bundle/matchit
+	url = https://github.com/vim-scripts/matchit.zip.git
+[submodule "bundle/ruby-matchit"]
+	path = bundle/ruby-matchit
+	url = https://github.com/vim-scripts/ruby-matchit.git
+[submodule "bundle/rails"]
+	path = bundle/rails
+	url = https://github.com/tpope/vim-rails.git
+[submodule "bundle/ruby-refactorings"]
+	path = bundle/ruby-refactorings
+	url = https://github.com/ecomba/vim-ruby-refactoring.git
+[submodule "bundle/yankring"]
+	path = bundle/yankring
+	url = https://github.com/chrismetcalf/vim-yankring.git
+[submodule "bundle/autocomplpop"]
+	path = bundle/autocomplpop
+	url = https://github.com/vim-scripts/AutoComplPop.git
+[submodule "bundle/sinatra"]
+	path = bundle/sinatra
+	url = https://github.com/hallison/vim-ruby-sinatra.git
+[submodule "bundle/snipmate"]
+	path = bundle/snipmate
+	url = git://github.com/msanders/snipmate.vim.git
+[submodule "bundle/rspec"]
+	path = bundle/rspec
+	url = https://github.com/vim-scripts/Vim-Rspec.git
+[submodule "bundle/checksyntax"]
+	path = bundle/checksyntax
+	url = https://github.com/tomtom/checksyntax_vim.git
+[submodule "bundle/vim-xdebug"]
+	path = bundle/vim-xdebug
+	url = https://github.com/ludovicPelle/vim-xdebug.git
+[submodule "bundle/zencoding"]
+	path = bundle/zencoding
+	url = https://github.com/mattn/zencoding-vim.git
+[submodule "bundle/tagbar"]
+	path = bundle/tagbar
+	url = git://github.com/majutsushi/tagbar
