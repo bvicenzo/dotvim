@@ -96,6 +96,11 @@ set statusline+=%=                                              " left/right sep
 set statusline+=%c,                                             " cursor column
 set statusline+=%l/%L                                           " cursor line/total lines
 set statusline+=\ %P                                            " percent through file
+ 
+" Warning syntastic
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
 
 " enhanced command line completion
 set wildmenu
@@ -224,5 +229,11 @@ nnoremap <leader>y :YRShow<CR>
 
 " TagList of functions
 map <leader>T :TlistToggle<CR>
+
+" Enable syntastic syntax checking
+let g:syntastic_enable_signs=1
+let g:syntastic_quiet_warnings=0
+let g:syntastic_check_on_open=1
+let g:syntastic_auto_jump=1
 
 let g:debuggerPort = 9001
