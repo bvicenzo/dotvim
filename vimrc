@@ -102,6 +102,9 @@ set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
 
+" PowerLine
+let g:Powerline_symbols = 'fancy'
+
 " enhanced command line completion
 set wildmenu
 " complete files like a shell
