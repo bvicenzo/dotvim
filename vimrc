@@ -221,8 +221,12 @@ nnoremap <C-w>h :tabnext<CR>
 " Remove file
 "nnoremap <C-D> :!rm %<CR>
 
-" CommandT TextMate style finder
-nnoremap <leader>t :CommandT<CR>
+" Ctrlp
+" List all files with a patern
+nnoremap <leader>p :CtrlP<CR>
+
+" List all files with a patern in buffer
+nnoremap <leader>P :CtrlPBuffer<CR>
 
 " switch to last used buffer
 nnoremap <leader>l :e#<CR>
