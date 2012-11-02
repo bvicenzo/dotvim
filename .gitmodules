@@ -58,15 +58,6 @@
 [submodule "bundle/snipmate"]
 	path = bundle/snipmate
 	url = git://github.com/msanders/snipmate.vim.git
-[submodule "bundle/rspec"]
-	path = bundle/rspec
-	url = https://github.com/vim-scripts/Vim-Rspec.git
-[submodule "bundle/checksyntax"]
-	path = bundle/checksyntax
-	url = https://github.com/tomtom/checksyntax_vim.git
-[submodule "bundle/vim-xdebug"]
-	path = bundle/vim-xdebug
-	url = https://github.com/ludovicPelle/vim-xdebug.git
 [submodule "bundle/zencoding"]
 	path = bundle/zencoding
 	url = https://github.com/mattn/zencoding-vim.git
