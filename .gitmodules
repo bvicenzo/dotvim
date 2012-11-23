@@ -76,3 +76,6 @@
 [submodule "bundle/vim-rspec"]
 	path = bundle/vim-rspec
 	url = git://github.com/skwp/vim-rspec.git
+[submodule "bundle/vim-slim"]
+	path = bundle/vim-slim
+	url = git://github.com/bbommarito/vim-slim.git
