@@ -2,6 +2,7 @@ Dependencias
 
   - Pacotes
      ack-grep (Ack)
+     exuberant-ctags
   - Gems
      hpricot (rspec)
 
