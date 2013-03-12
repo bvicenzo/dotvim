@@ -9,7 +9,7 @@ Dependencias
 Configuração
 
   - PowerLine
-    Instalar uma das fontes do endereço: https://github.com/Lokaltog/vim-powerline/wiki/Patched-fonts
+    Instalar uma das fontes do endereço: https://github.com/Lokaltog/powerline-fonts/tree/master/UbuntuMono
 
 Comandos Básicos
 
