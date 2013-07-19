@@ -241,7 +241,11 @@ map <leader>T :TlistToggle<CR>
 let g:syntastic_error_symbol='✗'
 let g:syntastic_warning_symbol='⚠'
 let g:syntastic_enable_signs=1
-let g:syntastic_quiet_warnings=0
+let g:syntastic_quiet_warnings=1
 let g:syntastic_check_on_open=1
 let g:syntastic_auto_jump=1
 let g:syntastic_enable_highlighting=1
+
+" Ruby debugger
+map <leader>pry orequire 'pry'; binding.pry<ESC>:w<CR>
+imap <leader>pry <CR>require 'pry'; binding.pry<ESC>:w<CR>
