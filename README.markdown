@@ -21,3 +21,5 @@ Comandos Básicos
   - ,be                     => Abre/fecha o buffer explorer
   - ,p                      => Abre o Buscador inteligente de arquivos
   - Ctrl+p                  => Precionado varias vezes permite escolher qual condeúdo copiado no buffer se deseja colar
+  - Ctrl+←                  => Navega para os arquivos do buffer à esquerda
+  - Ctrl+→                  => Navega para os arquivos do buffer à direita

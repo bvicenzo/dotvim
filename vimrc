@@ -102,8 +102,15 @@ set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
 
-" PowerLine
-let g:Powerline_symbols = 'fancy'
+" Airline
+let g:airline_powerline_fonts = 1
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#left_sep = ' '
+let g:airline#extensions#tabline#left_alt_sep = '<'
+
+" Buffer Navigation
+:noremap <C-left> :bprev<CR>
+:noremap <C-right> :bnext<CR> 
 
 " enhanced command line completion
 set wildmenu
