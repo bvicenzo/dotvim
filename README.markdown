@@ -10,6 +10,7 @@ Configuração
 
   - PowerLine
     Instalar uma das fontes do endereço: https://github.com/Lokaltog/powerline-fonts/tree/master/UbuntuMono
+    Para linux: https://powerline.readthedocs.org/en/latest/installation/linux.html#font-installation
 
 Comandos Básicos
 
