@@ -12,6 +12,11 @@ Configuração
     Instalar uma das fontes do endereço: https://github.com/Lokaltog/powerline-fonts/tree/master/UbuntuMono
     Para linux: https://powerline.readthedocs.org/en/latest/installation/linux.html#font-installation
 
+Instalação
+
+  - Executar o script instalar.sh
+     ```./instalar.sh```
+
 Comandos Básicos
 
   - :Ack [padrão]           => Busca por um deterinado padrão no projeto
