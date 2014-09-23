@@ -4,6 +4,7 @@
 [submodule "bundle/taglist"]
 	path = bundle/taglist
 	url = https://github.com/vim-scripts/taglist.vim.git
+	ignore = dirty
 [submodule "bundle/html5"]
 	path = bundle/html5
 	url = https://github.com/kaihendry/vim-html5.git
@@ -28,6 +29,7 @@
 [submodule "bundle/bufexplorer"]
 	path = bundle/bufexplorer
 	url = https://github.com/corntrace/bufexplorer.git
+	ignore = dirty
 [submodule "bundle/endwise"]
 	path = bundle/endwise
 	url = https://github.com/vim-scripts/endwise.vim.git
@@ -37,6 +39,7 @@
 [submodule "bundle/matchit"]
 	path = bundle/matchit
 	url = https://github.com/vim-scripts/matchit.zip.git
+	ignore = dirty
 [submodule "bundle/ruby-matchit"]
 	path = bundle/ruby-matchit
 	url = https://github.com/vim-scripts/ruby-matchit.git
@@ -49,21 +52,25 @@
 [submodule "bundle/yankring"]
 	path = bundle/yankring
 	url = https://github.com/vim-scripts/YankRing.vim.git
+	ignore = dirty
 [submodule "bundle/autocomplpop"]
 	path = bundle/autocomplpop
 	url = https://github.com/vim-scripts/AutoComplPop.git
+	ignore = dirty
 [submodule "bundle/sinatra"]
 	path = bundle/sinatra
 	url = https://github.com/hallison/vim-ruby-sinatra.git
 [submodule "bundle/snipmate"]
 	path = bundle/snipmate
 	url = git://github.com/msanders/snipmate.vim.git
+	ignore = dirty
 [submodule "bundle/tagbar"]
 	path = bundle/tagbar
 	url = git://github.com/majutsushi/tagbar
 [submodule "bundle/ctrlp"]
 	path = bundle/ctrlp
 	url = git://github.com/vim-scripts/ctrlp.vim.git
+	ignore = dirty
 [submodule "bundle/ack"]
 	path = bundle/ack
 	url = git://github.com/mileszs/ack.vim.git
