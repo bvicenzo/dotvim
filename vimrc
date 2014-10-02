@@ -25,6 +25,12 @@ set cc=120
 " show highlight columns on cursor
 set cursorcolumn
 
+" Hablitite vim for receive mouse clicks
+set mouse=a
+
+" Habilite vim yank to clipboard
+set clipboard=unnamedplus
+
 " enable syntax highlighting
 syntax on
 
@@ -258,3 +264,8 @@ let g:syntastic_enable_highlighting=1
 " Ruby debugger
 map <leader>pry orequire 'pry'; binding.pry<ESC>:w<CR>
 imap <leader>pry <CR>require 'pry'; binding.pry<ESC>:w<CR>
+
+" Toggle for add and remove line number, end line, and changes indicators
+" Good for copy multilines from vim (for example)
+imap <F12> <c-o>:set list! \| set nu! \| call gitgutter#toggle()<CR>
+map <F12> :set list! \| set nu! \| call gitgutter#toggle()<CR>

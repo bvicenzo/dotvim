@@ -29,3 +29,4 @@ Comandos Básicos
   - Ctrl+p                  => Precionado varias vezes permite escolher qual condeúdo copiado no buffer se deseja colar
   - Ctrl+←                  => Navega para os arquivos do buffer à esquerda
   - Ctrl+→                  => Navega para os arquivos do buffer à direita
+  - F12                     => Adiciona e remove indicadores de linha, fim de linha, e alterações
