@@ -16,10 +16,10 @@
 	url = https://github.com/vim-scripts/eruby.vim.git
 [submodule "bundle/syntastic"]
 	path = bundle/syntastic
-	url = git://github.com/scrooloose/syntastic.git
+	url = https://github.com/scrooloose/syntastic.git
 [submodule "bundle/fugitive"]
 	path = bundle/fugitive
-	url = git://github.com/tpope/vim-fugitive.git
+	url = https://github.com/tpope/vim-fugitive.git
 [submodule "bundle/nerdcommenter"]
 	path = bundle/nerdcommenter
 	url = https://github.com/scrooloose/nerdcommenter.git
@@ -62,30 +62,30 @@
 	url = https://github.com/hallison/vim-ruby-sinatra.git
 [submodule "bundle/snipmate"]
 	path = bundle/snipmate
-	url = git://github.com/msanders/snipmate.vim.git
+	url = https://github.com/msanders/snipmate.vim.git
 	ignore = dirty
 [submodule "bundle/tagbar"]
 	path = bundle/tagbar
-	url = git://github.com/majutsushi/tagbar
+	url = https://github.com/majutsushi/tagbar
 [submodule "bundle/ctrlp"]
 	path = bundle/ctrlp
-	url = git://github.com/vim-scripts/ctrlp.vim.git
+	url = https://github.com/vim-scripts/ctrlp.vim.git
 	ignore = dirty
 [submodule "bundle/ack"]
 	path = bundle/ack
-	url = git://github.com/mileszs/ack.vim.git
+	url = https://github.com/mileszs/ack.vim.git
 [submodule "bundle/vim-rspec"]
 	path = bundle/vim-rspec
-	url = git://github.com/skwp/vim-rspec.git
+	url = https://github.com/skwp/vim-rspec.git
 [submodule "bundle/vim-slim"]
 	path = bundle/vim-slim
-	url = git://github.com/slim-template/vim-slim.git
+	url = https://github.com/slim-template/vim-slim.git
 [submodule "bundle/vim-rabl"]
 	path = bundle/vim-rabl
-	url = git://github.com/yaymukund/vim-rabl.git
+	url = https://github.com/yaymukund/vim-rabl.git
 [submodule "bundle/emmet"]
 	path = bundle/emmet
-	url = git://github.com/mattn/emmet-vim.git
+	url = https://github.com/mattn/emmet-vim.git
 [submodule "bundle/vim-airline"]
 	path = bundle/vim-airline
 	url = git@github.com:bling/vim-airline.git
