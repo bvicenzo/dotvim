@@ -261,6 +261,11 @@ let g:syntastic_enable_highlighting=1
 " Silencia os Warnings
 "let g:syntastic_quiet_warnings=1
 
+" Defines specific files extensions for highlighting
+if has("syntax")
+  au BufNewFile,BufRead *.jsonify set filetype=ruby
+endif
+
 " Ruby debugger
 map <leader>pry orequire 'pry'; binding.pry<ESC>:w<CR>
 imap <leader>pry <CR>require 'pry'; binding.pry<ESC>:w<CR>
