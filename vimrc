@@ -267,7 +267,7 @@ if has("syntax")
 endif
 
 " Ruby debugger
-map <leader>pry orequire 'pry'; binding.pry<ESC>:w<CR>
+map <leader>rdb orequire 'pry'; binding.pry<ESC>:w<CR>
 
 " Toggle for add and remove line number, end line, and changes indicators
 " Good for copy multilines from vim (for example)
