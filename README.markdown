@@ -3,6 +3,7 @@ Dependencias
   - Pacotes
      ack-grep (Ack)
      exuberant-ctags
+     libjson-xs-perl
   - Gems
      hpricot (rspec)
 
