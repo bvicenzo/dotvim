@@ -264,6 +264,8 @@ let g:syntastic_enable_highlighting=1
 " Defines specific files extensions for highlighting
 if has("syntax")
   au BufNewFile,BufRead *.jsonify set filetype=ruby
+  au BufNewFile,BufRead Gemfile set filetype=ruby
+  au BufNewFile,BufRead *.json set filetype=javascript
 endif
 
 " Ruby debugger
