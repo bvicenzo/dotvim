@@ -28,8 +28,8 @@ set cursorcolumn
 " Hablitite vim for receive mouse clicks
 set mouse=a
 
-" Habilite vim yank to clipboard
-set clipboard=unnamedplus
+" Habilite vim yank to clipboard (it doesn't work for mac)
+"set clipboard=unnamedplus
 
 " enable syntax highlighting
 syntax on
@@ -244,9 +244,6 @@ nnoremap <leader>P :CtrlPBuffer<CR>
 
 " switch to last used buffer
 nnoremap <leader>l :e#<CR>
-
-" YankRing mapping
-nnoremap <leader>y :YRShow<CR>
 
 " TagList of functions
 map <leader>T :TlistToggle<CR>
