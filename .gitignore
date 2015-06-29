@@ -10,4 +10,5 @@ backup/*
 *.swn
 *.swo
 .DS_Store
+fonts/*
 Makefile
