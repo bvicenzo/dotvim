@@ -222,7 +222,7 @@ map <leader>bw :call Wipeout()<CR>
 map <leader>nt :NERDTreeToggle<CR>
 
 " JSON Format
-map <leader>jt <Esc>:%!json_xs -f json -t json-pretty<CR>
+map <leader>jt <Esc>:%!python -m json.tool<ESC>=%<CR>
 
 " XML Format
 map <leader>xt <Esc>:1,$!xmllint --format -<CR>
