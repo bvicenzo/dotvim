@@ -34,7 +34,7 @@ function fonts_install() {
 
 function mac_install() {
   echo -ne "\t+ Check dependencies...\n"
-  brew install python ctags ack homebrew/dupes/ncurses
+  brew install python ctags the_silver_searcher homebrew/dupes/ncurses
   
   echo -ne "\t+ Getting powerline fonts...\n"
   # Call fonts_install function 
@@ -64,10 +64,10 @@ function linux_install() {
   # Fork of https://github.com/bvicenzo/dotvim
   if [ -f /usr/bin/apt-get ]; then
     packager="apt-get"
-    packs="exuberant-ctags ack ncurses-term libjson-xs-perl" 
+    packs="exuberant-ctags silversearcher-ag ncurses-term libjson-xs-perl" 
   elif [ -f /usr/bin/yum ]; then
     packager="yum"
-    packs="ctags-etags ack ncurses-term perl-JSON-XS" 
+    packs="ctags-etags the_silver_searcher ncurses-term perl-JSON-XS" 
   else
     echo "ERR: Package Manager not indentified. Please install manually."
     exit 1
