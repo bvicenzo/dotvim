@@ -61,7 +61,6 @@ function mac_install() {
 }
 
 function linux_install() {
-  # Fork of https://github.com/bvicenzo/dotvim
   if [ -f /usr/bin/apt-get ]; then
     packager="apt-get"
     packs="exuberant-ctags silversearcher-ag ncurses-term libjson-xs-perl" 
