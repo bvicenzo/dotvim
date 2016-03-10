@@ -5,9 +5,6 @@
 	path = bundle/taglist
 	url = https://github.com/vim-scripts/taglist.vim.git
 	ignore = dirty
-[submodule "bundle/html5"]
-	path = bundle/html5
-	url = https://github.com/kaihendry/vim-html5.git
 [submodule "bundle/tabular"]
 	path = bundle/tabular
 	url = https://github.com/godlygeek/tabular.git
