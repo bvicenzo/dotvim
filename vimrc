@@ -256,7 +256,7 @@ let g:syntastic_check_on_open=1
 let g:syntastic_auto_jump=1
 let g:syntastic_enable_highlighting=1
 " Silencia os Warnings
-"let g:syntastic_quiet_warnings=1
+"let g:syntastic_quiet_messages = {'level': 'warnings'}
 
 " Defines specific files extensions for highlighting
 if has("syntax")
