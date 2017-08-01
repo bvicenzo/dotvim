@@ -32,7 +32,7 @@ set mouse=a
 " Works on linux
 "set clipboard=unnamedplus
 " Works on Mac
-set cursorcolumn
+set clipboard=unnamed
 
 " enable syntax highlighting
 syntax on
