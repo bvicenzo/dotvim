@@ -29,7 +29,10 @@ set cursorcolumn
 set mouse=a
 
 " Habilite vim yank to clipboard (it doesn't work for mac)
+" Works on linux
 "set clipboard=unnamedplus
+" Works on Mac
+set cursorcolumn
 
 " enable syntax highlighting
 syntax on
