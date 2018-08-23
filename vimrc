@@ -225,7 +225,7 @@ map <leader>bw :call Wipeout()<CR>
 map <leader>nt :NERDTreeToggle<CR>
 
 " JSON Format
-map <leader>jt <Esc>:%!python -m json.tool<ESC>=%<CR>
+map <leader>jt <Esc>:%!ruby -rjson -e "print JSON.pretty_generate(JSON.parse(ARGF.read))"<ESC>=%<CR>
 
 " XML Format
 map <leader>xt <Esc>:1,$!xmllint --format -<CR>
