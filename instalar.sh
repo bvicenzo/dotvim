@@ -63,7 +63,7 @@ function mac_install() {
 function linux_install() {
   if [ -f /usr/bin/apt-get ]; then
     packager="apt-get"
-    packs="exuberant-ctags silversearcher-ag ncurses-term libjson-xs-perl" 
+    packs="exuberant-ctags silversearcher-ag ncurses-term libjson-xs-perl vim-gtk" 
   elif [ -f /usr/bin/yum ]; then
     packager="yum"
     packs="ctags-etags the_silver_searcher ncurses-term perl-JSON-XS" 
