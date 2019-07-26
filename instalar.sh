@@ -34,7 +34,7 @@ function fonts_install() {
 
 function mac_install() {
   echo -ne "\t+ Check dependencies...\n"
-  brew install python ctags the_silver_searcher homebrew/dupes/ncurses
+  brew install python ctags the_silver_searcher ncurses
   
   echo -ne "\t+ Getting powerline fonts...\n"
   # Call fonts_install function 
