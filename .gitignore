@@ -11,5 +11,6 @@ backup/*
 *.swo
 .DS_Store
 fonts/
-bundle/
+bundle/*
+!bundle/.keep
 Makefile
