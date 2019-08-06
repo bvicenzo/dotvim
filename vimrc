@@ -8,20 +8,29 @@ call vundle#begin()
 "call vundle#begin('~/some/path/here')
 
 " let Vundle manage Vundle, required
+" Plugins
 Plugin 'VundleVim/Vundle.vim'
+" Themes
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'dracula/vim'
 Plugin 'scrooloose/nerdtree.git'
 Plugin 'ryanoasis/vim-devicons'
 Plugin 'cj/vim-webdevicons'
+" Buffer
 Plugin 'corntrace/bufexplorer'
+" Git
+Plugin 'tpope/vim-fugitive'
+Plugin 'airblade/vim-gitgutter'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
 
 " General Configuration
+
+" Line numbers
+set nu!
 
 " Change leader key
 let mapleader=","
@@ -34,6 +43,12 @@ nmap <silent> <leader>bd <Plug>Kwbd
 
 " Hablitite vim for receive mouse clicks
 set mouse=a
+
+" Habilite vim yank to clipboard (it doesn't work for mac)
+" Works on linux
+"set clipboard=unnamedplus
+" Works on Mac
+set clipboard=unnamed
 
 " Plugins Configuration
 
