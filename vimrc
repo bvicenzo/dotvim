@@ -32,6 +32,9 @@ set encoding=utf8
 " keep window on buffer delete
 nmap <silent> <leader>bd <Plug>Kwbd
 
+" Hablitite vim for receive mouse clicks
+set mouse=a
+
 " Plugins Configuration
 
 " AirLine
@@ -40,7 +43,10 @@ let g:airline_powerline_fonts = 1
 
 " Dracula
 syntax on
-color dracula
+" Fix broken colorscheme (see https://github.com/dracula/vim/issues/65#issuecomment-377496609)
+let g:dracula_italic = 0
+colorscheme dracula
+highlight Normal ctermbg=None
 
 " NerdTree
 map <leader>nt :NERDTreeToggle<CR>
