@@ -20,6 +20,7 @@ Plugin 'cj/vim-webdevicons'
 Plugin 'vim-scripts/CSApprox'
 " Buffer
 Plugin 'corntrace/bufexplorer'
+Plugin 'vim-scripts/kwbdi.vim.git'
 " Git
 Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-rhubarb' " required by fugitive to :Gbrowse
@@ -177,3 +178,7 @@ let g:UltiSnipsExpandTrigger="<tab>"
 let g:UltiSnipsJumpForwardTrigger="<tab>"
 let g:UltiSnipsJumpBackwardTrigger="<c-b>"
 let g:UltiSnipsEditSplit="vertical"
+
+" kwbdi
+" keep window on buffer delete
+nmap <silent> <leader>bd <Plug>Kwbd
