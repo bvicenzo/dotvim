@@ -2,15 +2,15 @@
 function fonts_install() {
   echo -ne "\t+ Getting powerline fonts...\n"
 
-  if [ -d ./fonts ]; then
-    rm -rf ./fonts
+  if [ -d "$CLONED_FONTS" ]; then
+    rm -rf "$CLONED_FONTS"
   fi
 
-  $(git clone https://github.com/terroo/fonts.git)
+  CLONED_FONTS="$INSTALLATION_PATH/fonts/"
+  $(git clone https://github.com/terroo/fonts.git "$CLONED_FONTS")
   
   # Fork of https://github.com/terroo/fonts.git)
-  powerline_fonts_dir=$( cd "$( dirname "$0" )" && pwd )
-  find_command="find \"$powerline_fonts_dir\" \( -name '*.[o,t]tf' -or -name '*.pcf.gz' \) -type f -print0"
+  find_command="find \""$CLONED_FONTS"\" \( -name '*.[o,t]tf' -or -name '*.pcf.gz' \) -type f -print0"
   
   if [[ `uname` == 'Darwin' ]]; then
     font_dir="$HOME/Library/Fonts"
@@ -27,8 +27,8 @@ function fonts_install() {
     fc-cache -f $font_dir
   fi
 
-  if [ -d ./fonts ]; then
-    rm -rf ./fonts
+  if [ -d "$CLONED_FONTS" ]; then
+    rm -rf "$CLONED_FONTS"
   fi
 
   echo -ne "\t+ Powerline fonts installed to $font_dir\n"
