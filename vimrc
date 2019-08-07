@@ -26,11 +26,15 @@ Plugin 'tpope/vim-rhubarb' " required by fugitive to :Gbrowse
 Plugin 'airblade/vim-gitgutter'
 " Finding
 Plugin 'rking/ag.vim'
-" Completion
-Plugin 'Raimondi/delimitMate'
 " Analyzing
 Plugin 'majutsushi/tagbar'
 Plugin 'w0rp/ale'
+Plugin 'Yggdroot/indentLine'
+Plugin 'sheerun/vim-polyglot'
+" Completion
+Plugin 'Raimondi/delimitMate'
+Plugin 'SirVer/ultisnips'
+Plugin 'honza/vim-snippets'
 if has('nvim')
   Plugin 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 else
@@ -44,6 +48,12 @@ call vundle#end()            " required
 filetype plugin indent on    " required
 
 " General Configuration
+
+" Change leader key
+let mapleader=","
+
+" Line numbers
+set nu!
 
 " Intuitive backspacing
 set backspace=indent,eol,start
@@ -85,12 +95,6 @@ set backup " turn on backup
 set backupdir=~/.vim/backup " dir to save backup files
 set directory=~/.vim/tmp " dir to keep all swap files
 
-" Line numbers
-set nu!
-
-" Change leader key
-let mapleader=","
-
 " Encoding
 set encoding=utf8
 
@@ -105,6 +109,15 @@ set mouse=a
 "set clipboard=unnamedplus
 " Works on Mac
 set clipboard=unnamed
+"
+" clears the search register
+nmap <silent> <leader>/ :nohlsearch<CR>
+
+" JSON Format
+map <leader>jt <Esc>:%!ruby -rjson -e "print JSON.pretty_generate(JSON.parse(ARGF.read))"<ESC>=%<CR>
+
+" XML Format
+map <leader>xt <Esc>:1,$!xmllint --format -<CR>
 
 " Plugins Configuration
 
@@ -156,3 +169,9 @@ nmap <silent> <C-j> <Plug>(ale_next_wrap)
 
 " Deoplete
 let g:deoplete#enable_at_startup = 1
+
+" snippets
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<tab>"
+let g:UltiSnipsJumpBackwardTrigger="<c-b>"
+let g:UltiSnipsEditSplit="vertical"
