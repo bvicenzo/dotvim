@@ -89,6 +89,12 @@ let mapleader=","
 " Line numbers
 set nu!
 
+" don't break wrapped lines on words
+set linebreak
+
+" set no word rap line
+set nowrap
+
 " Intuitive backspacing
 set backspace=indent,eol,start
 
@@ -267,7 +273,7 @@ let g:tagbar_type_ruby = {
 " RSpec.vim mappings
 map <Leader>t :call RunCurrentSpecFile()<CR>
 map <Leader>s :call RunNearestSpec()<CR>
-map <Leader>l :call RunLastSpec()<CR>
+map <Leader>ls :call RunLastSpec()<CR>
 map <Leader>a :call RunAllSpecs()<CR>
 
 " For ruby refactory
