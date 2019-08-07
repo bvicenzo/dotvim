@@ -5,14 +5,16 @@
 
  
 echo -ne "\t+ Cloning Vundle...\n"
-git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+# git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 
-source 'fonts_install.sh'
+current_dir="$(pwd)/installation"
+
+source "$current_dir/fonts_install.sh"
 
 if [[ $(uname) == 'Darwin' ]]; then
-  source 'mac_install.sh'
+  source "$current_dir/mac_install.sh"
 else
-  source 'linux_install.sh'
+  source "$current_dir/linux_install.sh"
 fi
 
 # Create symbolic link
