@@ -8,7 +8,7 @@ function fonts_install() {
 
   $(git clone https://github.com/terroo/fonts.git)
   
-  # Fork of https://github.com/powerline/fonts
+  # Fork of https://github.com/terroo/fonts.git)
   powerline_fonts_dir=$( cd "$( dirname "$0" )" && pwd )
   find_command="find \"$powerline_fonts_dir\" \( -name '*.[o,t]tf' -or -name '*.pcf.gz' \) -type f -print0"
   
@@ -34,6 +34,5 @@ function fonts_install() {
   echo -ne "\t+ Powerline fonts installed to $font_dir\n"
 }
 
-echo -ne "\t+ Getting powerline fonts...\n"
 # Call fonts_install function 
 fonts_install 
