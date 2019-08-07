@@ -3,34 +3,7 @@
 # credits for rabeloo at gmail dot com
 # source: https://github.com/rabeloo/belovim/blob/master/install.sh
 
-function fonts_install() {
-
-  if [ -d ./fonts ]; then
-    rm -rf ./fonts
-  fi
-
-  $(git clone https://github.com/powerline/fonts.git)
-  
-  # Fork of https://github.com/powerline/fonts
-  powerline_fonts_dir=$( cd "$( dirname "$0" )" && pwd )
-  find_command="find \"$powerline_fonts_dir\" \( -name '*.[o,t]tf' -or -name '*.pcf.gz' \) -type f -print0"
-  
-  if [[ `uname` == 'Darwin' ]]; then
-    font_dir="$HOME/Library/Fonts"
-  else
-    font_dir="$HOME/.fonts"
-    mkdir -p $font_dir
-  fi
-  
-  # Copy all fonts to user fonts directory
-  eval $find_command | xargs -0 -I % cp "%" "$font_dir/"
-  
-  # Reset font cache on Linux
-  if [[ -n `which fc-cache` ]]; then
-    fc-cache -f $font_dir
-  fi
-  echo -ne "\t+ Powerline fonts installed to $font_dir\n"
-}
+source 'fonts_install.sh'
 
 function mac_install() {
   echo -ne "\t+ Check dependencies...\n"
