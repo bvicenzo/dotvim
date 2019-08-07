@@ -27,6 +27,7 @@ Plugin 'tpope/vim-rhubarb' " required by fugitive to :Gbrowse
 Plugin 'airblade/vim-gitgutter'
 " Finding
 Plugin 'rking/ag.vim'
+Plugin 'kien/ctrlp.vim'
 " Analyzing
 Plugin 'majutsushi/tagbar'
 Plugin 'w0rp/ale'
@@ -182,3 +183,10 @@ let g:UltiSnipsEditSplit="vertical"
 " kwbdi
 " keep window on buffer delete
 nmap <silent> <leader>bd <Plug>Kwbd
+
+" Ctrlp
+" List all files with a patern
+nnoremap <leader>p :CtrlP<CR>
+
+" List all files with a patern in buffer
+nnoremap <leader>P :CtrlPBuffer<CR>
