@@ -22,6 +22,7 @@ Plugin 'vim-scripts/CSApprox'
 Plugin 'corntrace/bufexplorer'
 " Git
 Plugin 'tpope/vim-fugitive'
+Plugin 'tpope/vim-rhubarb' " required by fugitive to :Gbrowse
 Plugin 'airblade/vim-gitgutter'
 " Finding
 Plugin 'rking/ag.vim'
@@ -29,6 +30,14 @@ Plugin 'rking/ag.vim'
 Plugin 'Raimondi/delimitMate'
 " Analyzing
 Plugin 'majutsushi/tagbar'
+Plugin 'w0rp/ale'
+if has('nvim')
+  Plugin 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+else
+  Plugin 'Shougo/deoplete.nvim'
+  Plugin 'roxma/nvim-yarp'
+  Plugin 'roxma/vim-hug-neovim-rpc'
+endif
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -102,6 +111,7 @@ set clipboard=unnamed
 " AirLine
 let g:airline_theme='violet'
 let g:airline_powerline_fonts = 1
+let g:airline#extensions#ale#enabled = 1
 
 " Dracula
 syntax on
@@ -127,3 +137,22 @@ nnoremap <leader>l :e#<CR>          " switch to last used buffer
 
 " Taggbar
 map <leader>tb :TagbarToggle<CR>
+
+" Fugitive
+map <leader>bl :Gblame<CR>
+map <leader>gb :Gbrowse<CR>
+if exists("*fugitive#statusline")
+  set statusline+=%{fugitive#statusline()}
+endif
+
+" ale
+let g:ale_linters = {}
+let g:ale_sign_column_always = 1
+let g:ale_open_list = 1
+let g:ale_sign_error = '✗'
+let g:ale_sign_warning = '⚠'
+nmap <silent> <C-k> <Plug>(ale_previous_wrap)
+nmap <silent> <C-j> <Plug>(ale_next_wrap)
+
+" Deoplete
+let g:deoplete#enable_at_startup = 1
