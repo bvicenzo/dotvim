@@ -31,6 +31,8 @@ Plugin 'majutsushi/tagbar'
 Plugin 'w0rp/ale'
 Plugin 'Yggdroot/indentLine'
 Plugin 'sheerun/vim-polyglot'
+" Commenter
+Plugin 'scrooloose/nerdcommenter'
 " Completion
 Plugin 'Raimondi/delimitMate'
 Plugin 'SirVer/ultisnips'
