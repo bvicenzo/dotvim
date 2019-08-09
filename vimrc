@@ -30,7 +30,7 @@ Plugin 'rking/ag.vim'
 Plugin 'kien/ctrlp.vim'
 " Analyzing
 Plugin 'majutsushi/tagbar'
-Plugin 'w0rp/ale'
+Plugin 'dense-analysis/ale'
 Plugin 'Yggdroot/indentLine'
 Plugin 'sheerun/vim-polyglot'
 " Commenter
