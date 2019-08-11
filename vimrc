@@ -69,6 +69,7 @@ Plugin 'tpope/vim-rake'
 Plugin 'tpope/vim-projectionist'
 Plugin 'thoughtbot/vim-rspec'
 Plugin 'ecomba/vim-ruby-refactoring'
+Plugin 'victormours/ruby-memoize.vim'
 
 
 " scala
