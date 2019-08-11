@@ -35,6 +35,8 @@ Plugin 'Yggdroot/indentLine'
 Plugin 'sheerun/vim-polyglot'
 " Commenter
 Plugin 'scrooloose/nerdcommenter'
+" Documentation Generation
+Plugin 'kkoomen/vim-doge'
 " Refactoring
 Plugin 'AndrewRadev/splitjoin.vim'
 " Completion
