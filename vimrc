@@ -39,6 +39,7 @@ Plugin 'scrooloose/nerdcommenter'
 Plugin 'kkoomen/vim-doge'
 " Refactoring
 Plugin 'AndrewRadev/splitjoin.vim'
+Plugin 'terryma/vim-multiple-cursors' " Tutorial: https://www.youtube.com/watch?v=YwMgnmZNWXA
 " Completion
 Plugin 'Raimondi/delimitMate'
 Plugin 'SirVer/ultisnips'
