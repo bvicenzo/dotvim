@@ -220,6 +220,7 @@ map <leader>nt :NERDTreeToggle<CR>
 
 " Bufferexplorer
 nnoremap <leader>l :e#<CR>          " switch to last used buffer
+set hidden " Allow Bufer Explorer to change opened files without saving (http://vimcasts.org/transcripts/6/en/)
 
 " Taggbar
 map <leader>tb :TagbarToggle<CR>
