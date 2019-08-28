@@ -219,7 +219,8 @@ map <leader>nf :NERDTreeFind<CR>
 map <leader>nt :NERDTreeToggle<CR>
 
 " Bufferexplorer
-nnoremap <leader>l :e#<CR>          " switch to last used buffer
+" switch to last used buffer
+nnoremap <leader>l :e#<CR>
 set hidden " Allow Bufer Explorer to change opened files without saving (http://vimcasts.org/transcripts/6/en/)
 
 " Taggbar
@@ -228,7 +229,8 @@ map <leader>tb :TagbarToggle<CR>
 " Fugitive
 map <leader>gb :Gblame<CR>
 map <leader>of :Gbrowse<CR>
-nnoremap <Leader>ol :.Gbrowse<CR> "" Open current line on GitHub
+" Open current line on GitHub
+nnoremap <Leader>ol :.Gbrowse<CR>
 if exists("*fugitive#statusline")
   set statusline+=%{fugitive#statusline()}
 endif
