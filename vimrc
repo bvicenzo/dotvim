@@ -1,17 +1,99 @@
-" do not use vi compatibility mode. must come first because it changes other options.
-set nocompatible
+set nocompatible              " be iMproved, required
+filetype off                  " required
 
-" show incomplete commands
-set showcmd
+" set the runtime path to include Vundle and initialize
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+" alternatively, pass a path where Vundle should install plugins
+"call vundle#begin('~/some/path/here')
 
-" show invisibles
-set list
+" let Vundle manage Vundle, required
+" Plugins
+Plugin 'VundleVim/Vundle.vim'
+" Themes
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
+Plugin 'dracula/vim'
+Plugin 'scrooloose/nerdtree.git'
+Plugin 'ryanoasis/vim-devicons'
+Plugin 'cj/vim-webdevicons'
+Plugin 'vim-scripts/CSApprox'
+" Buffer
+Plugin 'corntrace/bufexplorer'
+Plugin 'vim-scripts/kwbdi.vim.git'
+" Git
+Plugin 'tpope/vim-fugitive'
+Plugin 'tpope/vim-rhubarb' " required by fugitive to :Gbrowse
+Plugin 'airblade/vim-gitgutter'
+" Finding
+Plugin 'rking/ag.vim'
+Plugin 'kien/ctrlp.vim'
+" Analyzing
+Plugin 'majutsushi/tagbar'
+Plugin 'dense-analysis/ale'
+Plugin 'Yggdroot/indentLine'
+Plugin 'sheerun/vim-polyglot'
+" Commenter
+Plugin 'scrooloose/nerdcommenter'
+" Documentation Generation
+Plugin 'kkoomen/vim-doge'
+" Refactoring
+Plugin 'AndrewRadev/splitjoin.vim'
+Plugin 'terryma/vim-multiple-cursors' " Tutorial: https://www.youtube.com/watch?v=YwMgnmZNWXA
+" Completion
+Plugin 'Raimondi/delimitMate'
+Plugin 'SirVer/ultisnips'
+Plugin 'honza/vim-snippets'
+if has('nvim')
+  Plugin 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+else
+  Plugin 'Shougo/deoplete.nvim'
+  Plugin 'roxma/nvim-yarp'
+  Plugin 'roxma/vim-hug-neovim-rpc'
+endif
 
-" use the same symbols as TextMate for tabstops and EOLs
-set listchars=tab:▸\ ,eol:¬
+" Programming Languages
+" html
+"" HTML Bundle
+Plugin 'hail2u/vim-css3-syntax'
+Plugin 'gorodinskiy/vim-coloresque'
+Plugin 'tpope/vim-haml'
+Plugin 'mattn/emmet-vim'
 
-" show line numbers
-set number
+
+" javascript
+"" Javascript Bundle
+Plugin 'jelera/vim-javascript-syntax'
+
+
+" ruby
+Plugin 'tpope/vim-rails'
+Plugin 'tpope/vim-rake'
+Plugin 'tpope/vim-projectionist'
+Plugin 'thoughtbot/vim-rspec'
+Plugin 'ecomba/vim-ruby-refactoring'
+Plugin 'victormours/ruby-memoize.vim'
+
+
+" scala
+if has('python')
+    " sbt-vim
+    Plugin 'ktvoelker/sbt-vim'
+endif
+" vim-scala
+Plugin 'derekwyatt/vim-scala'
+
+" All of your Plugins must be added before the following line
+call vundle#end()            " required
+filetype plugin indent on    " required
+
+" General Configuration
+
+" Change leader key
+let mapleader=","
+
+" Line numbers
+set nu!
 
 " don't break wrapped lines on words
 set linebreak
@@ -19,36 +101,11 @@ set linebreak
 " set no word rap line
 set nowrap
 
-" highlight N columns
-set cc=120
-
-" show highlight columns on cursor
-set cursorcolumn
-
-" Hablitite vim for receive mouse clicks
-set mouse=a
-
-" Habilite vim yank to clipboard (it doesn't work for mac)
-" Works on linux
-"set clipboard=unnamedplus
-" Works on Mac
-set clipboard=unnamed
-
-" enable syntax highlighting
-syntax on
-
-call pathogen#infect()
-call pathogen#helptags()
-
-" auto detect the type of file that is being edited 
-filetype on
-" enable file type detection
-filetype plugin on
-" enable filetype-based indentation
-filetype indent on
-
-" intuitive backspacing
+" Intuitive backspacing
 set backspace=indent,eol,start
+
+" use the same symbols as TextMate for tabstops and EOLs
+set listchars=tab:▸\ ,eol:¬
 
 " EOL format
 set fileformats=unix,mac,dos
@@ -87,81 +144,32 @@ set backup " turn on backup
 set backupdir=~/.vim/backup " dir to save backup files
 set directory=~/.vim/tmp " dir to keep all swap files
 
-" show status line all the time
-set laststatus=2
-
-" Useful status information at bottom of screen
-"set statusline=[%n]\ %<%.99f\ %h%w%m%r%y\ %{fugitive#statusline()}\ %{exists('g:loaded_rvm')?rvm#statusline():''}\ %=%-16(\ %l,%c-%v\ %)%P
-"statusline setup
-set statusline=%f                                               " tail of the filename
-set statusline+=\ [%{strlen(&fenc)?&fenc:'none'},               " file encoding
-set statusline+=\ %{&ff}]                                       " file format
-set statusline+=\ %r                                            " Opened type (read-only)
-set statusline+=\ %m                                            " Modify?
-set statusline+=\ %y                                            " File type (vim, php, ruby)
-set statusline+=\ %{fugitive#statusline()}                      " Git
-set statusline+=\ %{exists('g:loaded_rvm')?rvm#statusline():''} " RVM
-set statusline+=%=                                              " left/right separator
-set statusline+=%c,                                             " cursor column
-set statusline+=%l/%L                                           " cursor line/total lines
-set statusline+=\ %P                                            " percent through file
- 
-" Warning syntastic
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
-
-" Airline
-"  Fonts
-let g:airline_powerline_fonts = 1
-"  Buffer line (top)
-let g:airline#extensions#tabline#enabled = 1
-let g:airline#extensions#tabline#formatter = 'unique_tail_improved'
-
-" Buffer Navigation
-:noremap <C-left> :bprev<CR>
-:noremap <C-right> :bnext<CR> 
-
-" enhanced command line completion
-set wildmenu
-" complete files like a shell
-set wildmode=list:longest
-
-" handle multiple buffers better
-set hidden
-
-" set color scheme
-colorscheme molokai
-
-" enable 256 colors in terminal
-set t_Co=256
-
-" change leader key
-let mapleader=","
-
-" save keystrokes, so we don't need to press the Shift key
-nnoremap ; :
-
-" switch to last used buffer
-nnoremap <leader>l :e#<CR>
-
-" YankRing mapping
-nnoremap <leader>y :YRShow<CR>
-
-" YankRing configs
-let g:yankring_history_dir = "~/.vim/tmp"
-
-" clears the search register
-nmap <silent> <leader>/ :nohlsearch<CR>
+" Encoding
+set encoding=utf8
 
 " keep window on buffer delete
 nmap <silent> <leader>bd <Plug>Kwbd
 
-" use tagbar
-nmap <silent> <leader>b :TagbarToggle<CR>
+" Hablitite vim for receive mouse clicks
+set mouse=a
 
-" use sudo to write the file
-cmap w!! w !sudo tee % >/dev/null
+" Habilite vim yank to clipboard (it doesn't work for mac)
+" Works on linux
+"set clipboard=unnamedplus
+" Works on Mac
+set clipboard=unnamed
+"
+" clears the search register
+nmap <silent> <leader>/ :nohlsearch<CR>
+
+" JSON Format
+map <leader>jt <Esc>:%!ruby -rjson -e "print JSON.pretty_generate(JSON.parse(ARGF.read))"<ESC>=%<CR>
+
+" XML Format
+map <leader>xt <Esc>:1,$!xmllint --format -<CR>
+
+" Ruby debugger
+map <leader>rdb orequire 'pry'; binding.pry<ESC>:w<CR>
 
 " run the above commands only if vim is compiled with autocmd
 if has("autocmd")
@@ -184,59 +192,71 @@ function! <SID>StripTrailingWhitespaces()
   call cursor(l, c)
 endfunction
 
-" function to delete all hidden buffers
-function! Wipeout()
-  " list of *all* buffer numbers
-  let l:buffers = range(1, bufnr('$'))
+" Plugins Configuration
 
-  " what tab page are we in?
-  let l:currentTab = tabpagenr()
-  try
-    " go through all tab pages
-    let l:tab = 0
-    while l:tab < tabpagenr('$')
-      let l:tab += 1
+" AirLine
+let g:airline_theme='violet'
+let g:airline_powerline_fonts = 1
+let g:airline#extensions#ale#enabled = 1
 
-      " go through all windows
-      let l:win = 0
-      while l:win < winnr('$')
-        let l:win += 1
-        " whatever buffer is in this window in this tab, remove it from
-        " l:buffers list
-        let l:thisbuf = winbufnr(l:win)
-        call remove(l:buffers, index(l:buffers, l:thisbuf))
-      endwhile
-    endwhile
-
-    " if there are any buffers left, delete them
-    if len(l:buffers)
-      execute 'bwipeout' join(l:buffers)
-    endif
-  finally
-    " go back to our original tab page
-    execute 'tabnext' l:currentTab
-  endtry
-endfunction
-
-" mapping for function above
-map <leader>bw :call Wipeout()<CR>
+" Dracula
+syntax on
+" Fix broken colorscheme (see https://github.com/dracula/vim/issues/65#issuecomment-377496609)
+let g:dracula_italic = 0
+colorscheme dracula
+highlight Normal ctermbg=None
 
 " NerdTree
+let g:NERDTreeChDirMode=2
+let g:NERDTreeIgnore=['\.rbc$', '\~$', '\.pyc$', '\.db$', '\.sqlite$', '__pycache__']
+let g:NERDTreeSortOrder=['^__\.py$', '\/$', '*', '\.swp$', '\.bak$', '\~$']
+let g:NERDTreeShowBookmarks=1
+let g:nerdtree_tabs_focus_on_files=1
+let g:NERDTreeMapOpenInTabSilent = '<RightMouse>'
+let g:NERDTreeWinSize = 50
+set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*.pyc,*.db,*.sqlite
+map <leader>nf :NERDTreeFind<CR>
 map <leader>nt :NERDTreeToggle<CR>
 
-" JSON Format
-map <leader>jt <Esc>:%!ruby -rjson -e "print JSON.pretty_generate(JSON.parse(ARGF.read))"<ESC>=%<CR>
+" Bufferexplorer
+" switch to last used buffer
+nnoremap <leader>l :e#<CR>
+set hidden " Allow Bufer Explorer to change opened files without saving (http://vimcasts.org/transcripts/6/en/)
 
-" XML Format
-map <leader>xt <Esc>:1,$!xmllint --format -<CR>
+" Taggbar
+map <leader>tb :TagbarToggle<CR>
 
-" Tab next
-nnoremap <C-w>k :tabnew %<CR>
-nnoremap <C-w>l :tabprevious<CR>
-nnoremap <C-w>h :tabnext<CR>
+" Fugitive
+map <leader>gb :Gblame<CR>
+map <leader>of :Gbrowse<CR>
+" Open current line on GitHub
+nnoremap <Leader>ol :.Gbrowse<CR>
+if exists("*fugitive#statusline")
+  set statusline+=%{fugitive#statusline()}
+endif
 
-" Remove file
-"nnoremap <C-D> :!rm %<CR>
+" ale
+let g:ale_linters = {}
+let g:ale_list_window_size = 3
+let g:ale_sign_column_always = 1
+let g:ale_open_list = 1
+let g:ale_sign_error = '✗'
+let g:ale_sign_warning = '⚠'
+nmap <silent> <C-k> <Plug>(ale_previous_wrap)
+nmap <silent> <C-j> <Plug>(ale_next_wrap)
+
+" Deoplete
+let g:deoplete#enable_at_startup = 1
+
+" snippets
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<tab>"
+let g:UltiSnipsJumpBackwardTrigger="<c-b>"
+let g:UltiSnipsEditSplit="vertical"
+
+" kwbdi
+" keep window on buffer delete
+nmap <silent> <leader>bd <Plug>Kwbd
 
 " Ctrlp
 " List all files with a patern
@@ -245,33 +265,68 @@ nnoremap <leader>p :CtrlP<CR>
 " List all files with a patern in buffer
 nnoremap <leader>P :CtrlPBuffer<CR>
 
-" switch to last used buffer
-nnoremap <leader>l :e#<CR>
-
-" TagList of functions
-map <leader>T :TlistToggle<CR>
-
-" Enable syntastic syntax checking
-let g:syntastic_error_symbol='✗'
-let g:syntastic_warning_symbol='⚠'
-let g:syntastic_enable_signs=1
-let g:syntastic_check_on_open=1
-let g:syntastic_auto_jump=1
-let g:syntastic_enable_highlighting=1
-" Silencia os Warnings
-"let g:syntastic_quiet_messages = {'level': 'warnings'}
-
-" Defines specific files extensions for highlighting
-if has("syntax")
-  au BufNewFile,BufRead *.jsonify set filetype=ruby
-  au BufNewFile,BufRead Gemfile set filetype=ruby
-  au BufNewFile,BufRead *.json set filetype=javascript
+"" Include user's local vim config
+if filereadable(expand("~/.vimrc.local"))
+  source ~/.vimrc.local
 endif
 
-" Ruby debugger
-map <leader>rdb orequire 'pry'; binding.pry<ESC>:w<CR>
+" html
+" for html files, 2 spaces
+autocmd Filetype html setlocal ts=2 sw=2 expandtab
 
-" Toggle for add and remove line number, end line, and changes indicators
-" Good for copy multilines from vim (for example)
-imap <F12> <c-o>:set list! \| set nu! \| call gitgutter#toggle()<CR>
-map <F12> :set list! \| set nu! \| call gitgutter#toggle()<CR>
+
+" javascript
+let g:javascript_enable_domhtmlcss = 1
+
+" vim-javascript
+augroup vimrc-javascript
+  autocmd!
+  autocmd FileType javascript setl tabstop=4|setl shiftwidth=4|setl expandtab softtabstop=4
+augroup END
+
+
+" ruby
+let g:rubycomplete_buffer_loading = 1
+let g:rubycomplete_classes_in_global = 1
+let g:rubycomplete_rails = 1
+
+augroup vimrc-ruby
+  autocmd!
+  autocmd BufNewFile,BufRead *.rb,*.rbw,*.gemspec setlocal filetype=ruby
+  autocmd FileType ruby set tabstop=2|set shiftwidth=2|set expandtab softtabstop=2
+augroup END
+
+let g:tagbar_type_ruby = {
+    \ 'kinds' : [
+        \ 'm:modules',
+        \ 'c:classes',
+        \ 'd:describes',
+        \ 'C:contexts',
+        \ 'f:methods',
+        \ 'F:singleton methods'
+    \ ]
+\ }
+
+" RSpec.vim mappings
+map <Leader>t :call RunCurrentSpecFile()<CR>
+map <Leader>s :call RunNearestSpec()<CR>
+map <Leader>ls :call RunLastSpec()<CR>
+map <Leader>a :call RunAllSpecs()<CR>
+
+" For ruby refactory
+if has('nvim')
+  runtime! macros/matchit.vim
+else
+  packadd! matchit
+endif
+
+" Ruby refactory
+nnoremap <leader>rap  :RAddParameter<cr>
+nnoremap <leader>rcpc :RConvertPostConditional<cr>
+nnoremap <leader>rel  :RExtractLet<cr>
+vnoremap <leader>rec  :RExtractConstant<cr>
+vnoremap <leader>relv :RExtractLocalVariable<cr>
+nnoremap <leader>rit  :RInlineTemp<cr>
+vnoremap <leader>rrlv :RRenameLocalVariable<cr>
+vnoremap <leader>rriv :RRenameInstanceVariable<cr>
+vnoremap <leader>rem  :RExtractMethod<cr>
