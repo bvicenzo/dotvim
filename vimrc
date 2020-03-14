@@ -220,6 +220,7 @@ map <leader>nt :NERDTreeToggle<CR>
 
 " Bufferexplorer
 " switch to last used buffer
+let g:bufExplorerShowRelativePath=1
 nnoremap <leader>l :e#<CR>
 set hidden " Allow Bufer Explorer to change opened files without saving (http://vimcasts.org/transcripts/6/en/)
 
