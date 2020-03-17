@@ -28,6 +28,7 @@ Plugin 'airblade/vim-gitgutter'
 " Finding
 Plugin 'rking/ag.vim'
 Plugin 'kien/ctrlp.vim'
+Plugin 'pechorin/any-jump.vim'
 " Analyzing
 Plugin 'majutsushi/tagbar'
 Plugin 'dense-analysis/ale'
