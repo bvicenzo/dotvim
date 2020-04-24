@@ -158,11 +158,17 @@ nmap <silent> <leader>bd <Plug>Kwbd
 " Hablitite vim for receive mouse clicks
 set mouse=a
 
-" Habilite vim yank to clipboard (it doesn't work for mac)
-" Works on linux
-"set clipboard=unnamedplus
-" Works on Mac
-set clipboard=unnamed
+func! s:RunningInTmate()
+  return (matchstr($TMUX,'tmate') == 'tmate')
+endfunc
+
+" Habilite vim yank to clipboard
+if !s:RunningInTmate()
+  " Works on linux
+  "set clipboard=unnamedplus
+  " Works on Mac
+  set clipboard=unnamed
+endif
 "
 " clears the search register
 nmap <silent> <leader>/ :nohlsearch<CR>
