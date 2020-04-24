@@ -75,6 +75,10 @@ Plugin 'thoughtbot/vim-rspec'
 Plugin 'ecomba/vim-ruby-refactoring'
 Plugin 'victormours/ruby-memoize.vim'
 
+" Tmux and Tmate
+Plugin 'tmux-plugins/vim-tmux-focus-events'
+Plugin 'roxma/vim-tmux-clipboard'
+
 
 " scala
 if has('python')
