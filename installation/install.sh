@@ -17,6 +17,9 @@ else
   source "$INSTALLATION_PATH/linux_install.sh"
 fi
 
+# Install Plugins
+vim +PluginInstall +qall
+
 # Create symbolic link
 echo -ne "\t+ Linking vimrc file...\n"
 if [ -e "$HOME/.vimrc" ]; then
