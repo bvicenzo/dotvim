@@ -342,3 +342,7 @@ nnoremap <leader>rit  :RInlineTemp<cr>
 vnoremap <leader>rrlv :RRenameLocalVariable<cr>
 vnoremap <leader>rriv :RRenameInstanceVariable<cr>
 vnoremap <leader>rem  :RExtractMethod<cr>
+
+" Vim Polyglot
+let g:vim_markdown_conceal = 0
+let g:vim_json_syntax_conceal = 0
