@@ -28,7 +28,6 @@ Plugin 'airblade/vim-gitgutter'
 " Finding
 Plugin 'rking/ag.vim'
 Plugin 'kien/ctrlp.vim'
-Plugin 'pechorin/any-jump.vim'
 " Analyzing
 Plugin 'majutsushi/tagbar'
 Plugin 'dense-analysis/ale'
@@ -43,8 +42,6 @@ Plugin 'AndrewRadev/splitjoin.vim'
 Plugin 'terryma/vim-multiple-cursors' " Tutorial: https://www.youtube.com/watch?v=YwMgnmZNWXA
 " Completion
 Plugin 'Raimondi/delimitMate'
-Plugin 'SirVer/ultisnips'
-Plugin 'honza/vim-snippets'
 if has('nvim')
   Plugin 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 else
@@ -259,12 +256,6 @@ nmap <silent> <C-j> <Plug>(ale_next_wrap)
 
 " Deoplete
 let g:deoplete#enable_at_startup = 1
-
-" snippets
-let g:UltiSnipsExpandTrigger="<tab>"
-let g:UltiSnipsJumpForwardTrigger="<tab>"
-let g:UltiSnipsJumpBackwardTrigger="<c-b>"
-let g:UltiSnipsEditSplit="vertical"
 
 " kwbdi
 " keep window on buffer delete
