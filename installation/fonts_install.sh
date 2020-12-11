@@ -1,12 +1,13 @@
 #!/bin/bash
 function fonts_install() {
-  echo -ne "\t+ Getting powerline fonts...\n"
+  echo -ne "\t+ Getting nerd fonts...\n"
+
+  CLONED_FONTS="$HOME/nerd_fonts/"
 
   if [ -d "$CLONED_FONTS" ]; then
     rm -rf "$CLONED_FONTS"
   fi
 
-  CLONED_FONTS="$INSTALLATION_PATH/fonts/"
   $(git clone https://github.com/terroo/fonts.git "$CLONED_FONTS")
   
   # Fork of https://github.com/terroo/fonts.git)
