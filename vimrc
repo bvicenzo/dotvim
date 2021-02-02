@@ -16,7 +16,6 @@ Plugin 'vim-airline/vim-airline-themes'
 Plugin 'dracula/vim'
 Plugin 'scrooloose/nerdtree.git'
 Plugin 'ryanoasis/vim-devicons'
-Plugin 'cj/vim-webdevicons'
 Plugin 'vim-scripts/CSApprox'
 " Buffer
 Plugin 'corntrace/bufexplorer'
@@ -295,7 +294,7 @@ let g:rubycomplete_rails = 1
 
 augroup vimrc-ruby
   autocmd!
-  autocmd BufNewFile,BufRead *.rb,*.rbw,*.gemspec setlocal filetype=ruby
+  autocmd BufNewFile,BufRead *.rb,*.rbw,*.gemspec,*.jbuilder setlocal filetype=ruby
   autocmd FileType ruby set tabstop=2|set shiftwidth=2|set expandtab softtabstop=2
 augroup END
 

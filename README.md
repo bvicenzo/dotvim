@@ -21,7 +21,6 @@
 - https://github.com/dracula/vim
 - https://github.com/scrooloose/nerdtree.git
 - https://github.com/ryanoasis/vim-devicons
-- https://github.com/cj/vim-webdevicons
 - https://github.com/vim-scripts/CSApprox
 
 ### Buffer
