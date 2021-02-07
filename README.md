@@ -15,26 +15,27 @@
 ```
 # Plugins
 
+### Coc Vim
+- https://github.com/neoclide/coc.nvim
+
 ### Themes
 - https://github.com/vim-airline/vim-airline
 - https://github.com/vim-airline/vim-airline-themes
 - https://github.com/dracula/vim
-- https://github.com/scrooloose/nerdtree.git
+- https://github.com/preservim/nerdtree
 - https://github.com/ryanoasis/vim-devicons
-- https://github.com/vim-scripts/CSApprox
 
 ### Buffer
-- https://github.com/corntrace/bufexplorer
-- https://github.com/vim-scripts/kwbdi.vim.git
+- https://githib.com/yuki-yano/fzf-preview.vim
 
 ### Git
 - https://github.com/tpope/vim-fugitive
 - https://github.com/tpope/vim-rhubarb
-- https://github.com/airblade/vim-gitgutter
 
 ### Finding
-- https://github.com/rking/ag.vim
-- https://github.com/kien/ctrlp.vim
+- https://githib.com/junegunn/fzf
+- https://githib.com/junegunn/fzf.vim
+- https://githib.com/yuki-yano/fzf-preview.vim
 
 ### Analyzing
 - https://github.com/majutsushi/tagbar
@@ -52,26 +53,15 @@
 - https://github.com/AndrewRadev/splitjoin.vim
 - https://github.com/terryma/vim-multiple-cursors
 
-### Completion
-- https://github.com/Raimondi/delimitMate
-- https://github.com/SirVer/ultisnips
-- https://github.com/honza/vim-snippets
-- https://github.com/Shougo/deoplete.nvim
-- https://github.com/roxma/nvim-yarp
-- https://github.com/roxma/vim-hug-neovim-rpc
 
 ### Programming Languages
 
 ### HTML
-- https://github.com/hail2u/vim-css3-syntax
-- https://github.com/gorodinskiy/vim-coloresque
-- https://github.com/tpope/vim-haml
 - https://github.com/mattn/emmet-vim
 
 
 ### Javascript
-- https://github.com/jelera/vim-javascript-syntax
-
+- https://github.com/mattn/emmet-vim
 
 ### Ruby
 - https://github.com/tpope/vim-rails
@@ -80,8 +70,3 @@
 - https://github.com/thoughtbot/vim-rspec
 - https://github.com/ecomba/vim-ruby-refactoring
 - https://github.com/victormours/ruby-memoize.vim
-
-
-### Scala
-- https://github.com/ktvoelker/sbt-vim
-- https://github.com/derekwyatt/vim-scala
