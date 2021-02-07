@@ -45,6 +45,7 @@ Plug 'tpope/vim-fugitive'
 
 " Refactoring
 Plug 'tpope/vim-surround'
+Plug 'Raimondi/delimitMate'
 
 " Initialize plugin system
 call plug#end()
@@ -344,7 +345,6 @@ endif
 
 if PlugLoaded('vim')
   " Dracula
-  syntax on
   " Fix broken colorscheme (see https://github.com/dracula/vim/issues/65#issuecomment-377496609)
   let g:dracula_italic = 0
   colorscheme dracula
