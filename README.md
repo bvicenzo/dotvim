@@ -82,6 +82,10 @@
 - [https://github.com/neoclide/coc-json]
 - [https://github.com/neoclide/coc-tsserver]
 
+#### CSS
+
+- [https://github.com/neoclide/coc-highlight]
+
 #### Ruby
 
 - [https://github.com/tpope/vim-rails]
