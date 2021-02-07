@@ -73,6 +73,7 @@
 
 - [https://github.com/mattn/emmet-vim]
 - [https://github.com/neoclide/coc-emmet]
+- [https://github.com/neoclide/coc-html]
 
 #### Javascript
 
