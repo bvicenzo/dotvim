@@ -146,7 +146,8 @@ let g:coc_global_extensions = [
         \'coc-tsserver',
         \'coc-diagnostic',
         \'coc-emmet',
-        \'coc-fzf-preview'
+        \'coc-fzf-preview',
+        \'coc-markdownlint'
 	\]
 
 " Coc Basics
