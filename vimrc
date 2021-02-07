@@ -106,9 +106,6 @@ set directory=~/.vim/tmp " dir to keep all swap files
 " Encoding
 set encoding=utf8
 
-" keep window on buffer delete
-nmap <silent> <leader>bd <Plug>Kwbd
-
 " Hablitite vim for receive mouse clicks
 set mouse=a
 
@@ -126,6 +123,7 @@ endif
 
 " Buffer
 map <leader>bd :bw<CR>
+map <leader>l :e#<CR>
 
 " clears the search register
 nmap <silent> <leader>/ :nohlsearch<CR>
