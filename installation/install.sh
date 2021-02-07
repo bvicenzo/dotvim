@@ -6,10 +6,10 @@
 VIM_PATH="$HOME/.vim"
 INSTALLATION_PATH="$VIM_PATH/installation"
 
-echo -ne "\t+ Cloning Vundle...\n"
-git clone https://github.com/VundleVim/Vundle.vim.git "$VIM_PATH/bundle/Vundle.vim"
+echo -ne "\t+ Installing Plug...\n"
+vim -es -u vimrc -i NONE -c "PlugInstall" -c "qa"
 
-source "$INSTALLATION_PATH/fonts_install.sh"
+#source "$INSTALLATION_PATH/fonts_install.sh"
 
 if [[ $(uname) == 'Darwin' ]]; then
   source "$INSTALLATION_PATH/mac_install.sh"
@@ -18,7 +18,7 @@ else
 fi
 
 # Install Plugins
-vim +PluginInstall +qall
+vim +PlugInstall +qall
 
 # Create symbolic link
 echo -ne "\t+ Linking vimrc file...\n"

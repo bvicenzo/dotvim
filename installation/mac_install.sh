@@ -2,10 +2,13 @@
 
 function mac_install() {
   echo -ne "\t+ Check dependencies...\n"
-  brew install ag python
-  
-  echo -ne "\t+ Installing Deoplete dependency"
-  pip3 install --user --upgrade pynvim
+  brew install node ag ripgrep fzf
+
+  echo "installing yarn..."
+  npm install -g yarn
+
+  echo "Adding useful fzf key bindings"
+  $(brew --prefix)/opt/fzf/install --no-bash --no-fish
   
   echo "************* IMPORTANT ************
   
