@@ -84,7 +84,9 @@
 
 #### CSS
 
+- [https://github.com/neoclide/coc-css]
 - [https://github.com/neoclide/coc-highlight]
+- [https://github.com/neoclide/coc-stylelint]
 
 #### Ruby
 
