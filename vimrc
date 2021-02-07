@@ -149,7 +149,8 @@ let g:coc_global_extensions = [
         \'coc-fzf-preview',
         \'coc-markdownlint',
         \'coc-html',
-        \'coc-highlight'
+        \'coc-highlight',
+        \'coc-sh'
 	\]
 
 " Coc Basics

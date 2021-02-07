@@ -94,3 +94,7 @@
 - [https://github.com/thoughtbot/vim-rspec]
 - [https://github.com/ecomba/vim-ruby-refactoring]
 - [https://github.com/victormours/ruby-memoize.vim]
+
+#### Shell Scripting
+
+- [https://github.com/josa42/coc-sh]
