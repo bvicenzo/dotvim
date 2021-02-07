@@ -53,6 +53,7 @@
 - [https://github.com/sheerun/vim-polyglot]
 - [https://github.com/fannheyward/coc-markdownlint]
 - [https://github.com/iamcco/coc-diagnostic]
+- [https://github.com/neoclide/coc-snippets]
 
 ### Commenter
 
@@ -104,6 +105,10 @@
 #### YAML
 
 - [https://github.com/neoclide/coc-yaml]
+
+#### Swagger
+
+- [https://github.com/haishanh/coc-swagger]
 
 #### Shell Scripting
 

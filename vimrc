@@ -154,7 +154,8 @@ let g:coc_global_extensions = [
         \'coc-css',
         \'coc-stylelint',
         \'coc-yank',
-        \'coc-yaml'
+        \'coc-yaml',
+        \'coc-swagger'
 	\]
 
 " Coc Basics
@@ -398,5 +399,9 @@ map <leader>sc :CocCommand git.showCommit<CR>
 
 " Yanking
 nnoremap <silent> <space>y  :<C-u>CocList -A --normal yank<cr>
+
+" Swagger
+" tips: add a (slightly) short command
+command -nargs=0 Swagger :CocCommand swagger.render
 
 set statusline^=%{get(g:,'coc_git_status','')}%{get(b:,'coc_git_status','')}%{get(b:,'coc_git_blame','')}
