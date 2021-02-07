@@ -36,12 +36,14 @@
 
 - [https://github.com/tpope/vim-fugitive]
 - [https://github.com/tpope/vim-rhubarb]
+- [https://github.com/neoclide/coc-git]
 
 ### Finding
 
 - [https://githib.com/junegunn/fzf]
 - [https://githib.com/junegunn/fzf.vim]
 - [https://githib.com/yuki-yano/fzf-preview.vim]
+- [https://github.com/yuki-yano/fzf-preview.vim]
 
 ### Analyzing
 
@@ -50,6 +52,7 @@
 - [https://github.com/Yggdroot/indentLine]
 - [https://github.com/sheerun/vim-polyglot]
 - [https://github.com/fannheyward/coc-markdownlint]
+- [https://github.com/iamcco/coc-diagnostic]
 
 ### Commenter
 
@@ -69,10 +72,14 @@
 #### HTML
 
 - [https://github.com/mattn/emmet-vim]
+- [https://github.com/neoclide/coc-emmet]
 
 #### Javascript
 
 - [https://github.com/mattn/emmet-vim]
+- [https://github.com/neoclide/coc-emmet]
+- [https://github.com/neoclide/coc-json]
+- [https://github.com/neoclide/coc-tsserver]
 
 #### Ruby
 
