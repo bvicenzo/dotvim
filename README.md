@@ -43,7 +43,7 @@
 - https://github.com/sheerun/vim-polyglot
 
 ### Commenter
-- https://github.com/scrooloose/nerdcommenter
+- https://github.com/tomtom/tcomment_vim
 
 ### Documentation Generation
 - https://github.com/kkoomen/vim-doge

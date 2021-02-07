@@ -29,6 +29,9 @@ Plug 'ryanoasis/vim-devicons'
 " Analysing
 Plug 'dense-analysis/ale'
 
+" Commenter
+Plug 'tomtom/tcomment_vim'
+
 " Completion
 Plug 'mattn/emmet-vim'
 
@@ -376,6 +379,8 @@ let g:fzf_preview_quit_map = 0
 map <leader>f :CocCommand fzf-preview.ProjectFiles<CR>
 map <leader>be :CocCommand fzf-preview.AllBuffers<CR>
 
+" TComment
+map <leader>c<space> ,__<CR>
 
 " Coc Extensions Configuration
 
