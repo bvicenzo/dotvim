@@ -152,7 +152,8 @@ let g:coc_global_extensions = [
         \'coc-sh',
         \'coc-highlight',
         \'coc-css',
-        \'coc-stylelint'
+        \'coc-stylelint',
+        \'coc-yank'
 	\]
 
 " Coc Basics
@@ -393,5 +394,8 @@ map <leader>c<space> ,__<CR>
 " Git
 map <leader>of :CocCommand git.browserOpen<CR>
 map <leader>sc :CocCommand git.showCommit<CR>
+
+" Yanking
+nnoremap <silent> <space>y  :<C-u>CocList -A --normal yank<cr>
 
 set statusline^=%{get(g:,'coc_git_status','')}%{get(b:,'coc_git_status','')}%{get(b:,'coc_git_blame','')}

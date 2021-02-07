@@ -67,6 +67,10 @@
 - [https://github.com/AndrewRadev/splitjoin.vim]
 - [https://github.com/terryma/vim-multiple-cursors]
 
+### Yanking
+
+- [https://github.com/neoclide/coc-yank]
+
 ### Programming Languages
 
 #### HTML
