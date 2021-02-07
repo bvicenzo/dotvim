@@ -153,7 +153,8 @@ let g:coc_global_extensions = [
         \'coc-highlight',
         \'coc-css',
         \'coc-stylelint',
-        \'coc-yank'
+        \'coc-yank',
+        \'coc-yaml'
 	\]
 
 " Coc Basics

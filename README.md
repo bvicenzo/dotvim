@@ -101,6 +101,10 @@
 - [https://github.com/ecomba/vim-ruby-refactoring]
 - [https://github.com/victormours/ruby-memoize.vim]
 
+#### YAML
+
+- [https://github.com/neoclide/coc-yaml]
+
 #### Shell Scripting
 
 - [https://github.com/josa42/coc-sh]
