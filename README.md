@@ -67,6 +67,7 @@
 
 - [https://github.com/AndrewRadev/splitjoin.vim]
 - [https://github.com/terryma/vim-multiple-cursors]
+- [https://github.com/tpope/vim-surround]
 
 ### Yanking
 

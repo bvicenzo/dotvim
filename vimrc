@@ -43,6 +43,9 @@ Plug 'yuki-yano/fzf-preview.vim', { 'branch': 'release/rpc' }
 " Git
 Plug 'tpope/vim-fugitive'
 
+" Refactoring
+Plug 'tpope/vim-surround'
+
 " Initialize plugin system
 call plug#end()
 
