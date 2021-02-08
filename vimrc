@@ -386,7 +386,7 @@ endif
 let g:fzf_preview_use_dev_icons = 1
 let g:fzf_preview_dev_icon_prefix_string_length = 3
 let g:fzf_preview_quit_map = 0
-map <leader>f :CocCommand fzf-preview.ProjectFiles<CR>
+map <leader>p :CocCommand fzf-preview.ProjectFiles<CR>
 map <leader>be :CocCommand fzf-preview.AllBuffers<CR>
 
 " TComment
