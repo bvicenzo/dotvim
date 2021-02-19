@@ -423,3 +423,27 @@ nnoremap <silent> <space>y  :<C-u>CocList -A --normal yank<cr>
 command -nargs=0 Swagger :CocCommand swagger.render
 
 set statusline^=%{get(g:,'coc_git_status','')}%{get(b:,'coc_git_status','')}%{get(b:,'coc_git_blame','')}
+
+
+" Useful functions and commands
+
+" run the above commands only if vim is compiled with autocmd
+if has("autocmd")
+  autocmd BufWritePost .vimrc source $MYVIMRC " apply .vimrc settings on save
+  autocmd BufWritePre *.rb,*.erb,*.html,*.js,*.css,*.php,*.py,*.json :call <SID>StripTrailingWhitespaces() " remove trailing white spaces before saving (only in specified filetypes)
+endif
+
+" function to remove trailing white space (while saving cursor position)
+" http://vimcasts.org/episodes/tidying-whitespace/
+
+function! <SID>StripTrailingWhitespaces()
+  " Preparation: save last search, and cursor position.
+  let _s=@/
+  let l = line(".")
+  let c = col(".")
+  " Do the business:
+  %s/\s\+$//e
+  " Clean up: restore previous search history, and cursor position
+  let @/=_s
+  call cursor(l, c)
+endfunction
