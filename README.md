@@ -30,7 +30,7 @@
 
 ### Buffer
 
-- [https://githib.com/yuki-yano/fzf-preview.vim]
+- [https://github.com/yuki-yano/fzf-preview.vim]
 
 ### Git
 
@@ -40,10 +40,11 @@
 
 ### Finding
 
-- [https://githib.com/junegunn/fzf]
-- [https://githib.com/junegunn/fzf.vim]
-- [https://githib.com/yuki-yano/fzf-preview.vim]
+- [https://github.com/junegunn/fzf]
+- [https://github.com/junegunn/fzf.vim]
 - [https://github.com/yuki-yano/fzf-preview.vim]
+- [https://github.com/yuki-yano/fzf-preview.vim]
+- [https://github.com/andymass/vim-matchup]
 
 ### Analyzing
 
