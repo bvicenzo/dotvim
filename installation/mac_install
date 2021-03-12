@@ -4,6 +4,7 @@
 puts 'Checking dependencies...'
 dependencies = {
   node: :node,
+  npm: npm,
   ag: :ag,
   rg: :ripgrep,
   fzf: :fzf

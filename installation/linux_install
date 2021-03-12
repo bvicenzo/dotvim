@@ -1,22 +1,37 @@
 #!/usr/bin/env ruby
 # frozen_string_literal: true
 
+def distro_name
+  return :ubuntu if File.exist?('/usr/bin/apt-get')
+end
+
 puts 'Checking dependencies...'
 dependencies = {
-  node: :node,
-  ag: :'silversearcher-ag',
-  rg: :ripgrep,
-  fzf: :fzf
+  ubuntu: {
+    node: 'nodejs',
+    npm: 'npm',
+    ag: 'silversearcher-ag',
+    rg: 'ripgrep',
+    fzf: 'fzf'
+  }
 }
-missing_dependencies = dependencies.keys.select do |dependency_binary_name|
+
+if distro_name.nil?
+  puts "\nDistro not supported. Please, fell free to add yours."
+  exit
+end
+
+distro_dependencies = dependencies[distro_name]
+missing_dependencies = distro_dependencies.keys.select do |dependency_binary_name|
   `which #{dependency_binary_name}`.empty?
 end
 
-dependency_names = dependencies.slice(*missing_dependencies).values.join(' ')
+dependency_names = distro_dependencies.slice(*missing_dependencies).values.join(' ')
 
 if !dependency_names.empty?
   puts "Installing #{dependency_names}..."
-  `brew install #{dependency_names}`
+  `sudo apt-get update`
+  `sudo apt-get install #{dependency_names} -y`
 else
   puts 'All dependencies installed!'
 end
@@ -26,13 +41,6 @@ if `which yarn`.empty?
   `npm install -g yarn`
 else
   puts 'Yarn is already installed'
-end
-
-puts "\nChecking Fzf completion"
-if !File.exist?(File.expand_path('~/.fzf.zsh'))
-  `$(brew --prefix)/opt/fzf/install`
-else
-  puts 'Fzf completion already installed'
 end
 
 puts "************* IMPORTANT ************,
@@ -49,46 +57,3 @@ Suggest: RobotoMono Nerd Font
 Enjoy it!
 Thanks!
 ***********************************"
-
-#!/bin/bash
-
-#TODO Recreate in a linux machine
-#function linux_install() {
-  #if [ -f /usr/bin/apt-get ]; then
-    #packager="apt-get"
-    #packs="exuberant-ctags silversearcher-ag ncurses-term libjson-xs-perl vim-gtk" 
-  #elif [ -f /usr/bin/yum ]; then
-    #packager="yum"
-    #packs="ctags-etags the_silver_searcher ncurses-term perl-JSON-XS" 
-  #else
-    #echo "ERR: Package Manager not indentified. Please install manually."
-    #exit 1
-  #fi
-
-  #echo "Installing pre-requisites..."
-  #for pack in $packs; do
-    #sudo $packager install $pack -y
-  #done
-  
-  #echo "Configuring VIM..."
-  #if [ ! -d ~/.fonts/ ]; then
-   #mkdir ~/.fonts
-   #if [ ! -f ~/.fonts/PowerlineSymbols.otf ]; then
-     #wget "https://github.com/Lokaltog/powerline/raw/develop/font/PowerlineSymbols.otf"
-     #mv PowerlineSymbols.otf ~/.fonts/
-   #fi
-  #fi
-
-  #if [ ! -d ~/.config/fontconfig/conf.d/ ]; then
-   #mkdir -p ~/.config/fontconfig/conf.d/
-   #if [ ! -f ~/.config/fontconfig/conf.d/10-powerline-symbols.conf ]; then
-     #wget "https://github.com/Lokaltog/powerline/raw/develop/font/10-powerline-symbols.conf"
-     #mv 10-powerline-symbols.conf ~/.config/fontconfig/conf.d/
-   #fi
-  #fi
-  
-  #echo "Installing Plugins..."
-  #git submodule update --init
-#}
-
-#linux_install

@@ -8,7 +8,7 @@ installation_path = File.join(vim_path, 'installation')
 
 system_name = `uname`.chomp == 'Darwin' ? 'mac' : 'linux'
 
-`.#{installation_path}/#{system_name}_install.sh`
+load "#{installation_path}/#{system_name}_install"
 
 puts "\nInstalling Plug..."
 `vim -es -u vimrc -i NONE -c "PlugInstall" -c "qa"`
