@@ -1,0 +1,51 @@
+#!/usr/bin/env ruby
+# frozen_string_literal: true
+
+puts 'Checking dependencies...'
+dependencies = {
+  node: :node,
+  ag: :ag,
+  rg: :ripgrep,
+  fzf: :fzf
+}
+missing_dependencies = dependencies.keys.select do |dependency_binary_name|
+  `which #{dependency_binary_name}`.empty?
+end
+
+dependency_names = dependencies.slice(*missing_dependencies).values.join(' ')
+
+if !dependency_names.empty?
+  puts "Installing #{dependency_names}..."
+  `brew install #{dependency_names}`
+else
+  puts 'All dependencies installed!'
+end
+
+puts "\nChecking yarn installation"
+if `which yarn`.empty?
+  `npm install -g yarn`
+else
+  puts 'Yarn is already installed'
+end
+
+puts "\nChecking Fzf completion"
+if !File.exist?(File.expand_path('~/.fzf.zsh'))
+  `$(brew --prefix)/opt/fzf/install`
+else
+  puts 'Fzf completion already installed'
+end
+
+puts "************* IMPORTANT ************,
+Please change the font of your current profile in iTerm2:
+
+In iTerm2 go to:
+
+1. Preferences > Profile
+2. Select the text tab
+3. Change the Regular and Non-ASCII using fonts for Powerline:
+
+Suggest: RobotoMono Nerd Font
+
+Enjoy it!
+Thanks!
+***********************************"
