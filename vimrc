@@ -54,6 +54,13 @@ Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-surround'
 Plug 'Raimondi/delimitMate'
 
+" Ruby
+Plug 'tpope/vim-rails'
+Plug 'tpope/vim-projectionist'
+Plug 'ecomba/vim-ruby-refactoring'
+Plug 'ecomba/vim-ruby-refactoring'
+Plug 'victormours/ruby-memoize.vim'
+
 " Tmate/Tmux
 Plug 'tmux-plugins/vim-tmux-focus-events'
 Plug 'roxma/vim-tmux-clipboard'
