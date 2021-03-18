@@ -11,6 +11,7 @@ dependencies = {
     node: 'nodejs',
     npm: 'npm',
     ag: 'silversearcher-ag',
+    batcat: 'bat',
     rg: 'ripgrep',
     fzf: 'fzf'
   }
@@ -26,12 +27,21 @@ missing_dependencies = distro_dependencies.keys.select do |dependency_binary_nam
   `which #{dependency_binary_name}`.empty?
 end
 
-dependency_names = distro_dependencies.slice(*missing_dependencies).values.join(' ')
+dependency_names = distro_dependencies.values_at(*missing_dependencies)
 
 if !dependency_names.empty?
   puts "Installing #{dependency_names}..."
   `sudo apt-get update`
-  `sudo apt-get install #{dependency_names} -y`
+  # Work Around to conflict with ripgrep
+  # https://github.com/sharkdp/bat/issues/938#issuecomment-646745610
+  bat = dependency_names.delete('bat')
+  ripgrep = dependency_names.delete('ripgrep')
+  `sudo apt install -o Dpkg::Options::="--force-overwrite" bat ripgrep` if [bat, ripgrep].none?
+  batcat_path = '/usr/bin/batcat'
+  bat_path = '/usr/bin/bat'
+  File.symlink(batcat_path, bat_path) if File.exist?(batcat_path) && !File.symlink?(bat)
+
+  `sudo apt-get install #{dependency_names.join(' ')} -y`
 else
   puts 'All dependencies installed!'
 end
