@@ -1,0 +1,69 @@
+#!/usr/bin/env ruby
+# frozen_string_literal: true
+
+def distro_name
+  return :ubuntu if File.exist?('/usr/bin/apt-get')
+end
+
+puts 'Checking dependencies...'
+dependencies = {
+  ubuntu: {
+    node: 'nodejs',
+    npm: 'npm',
+    ag: 'silversearcher-ag',
+    batcat: 'bat',
+    rg: 'ripgrep',
+    fzf: 'fzf'
+  }
+}
+
+if distro_name.nil?
+  puts "\nDistro not supported. Please, fell free to add yours."
+  exit
+end
+
+distro_dependencies = dependencies[distro_name]
+missing_dependencies = distro_dependencies.keys.select do |dependency_binary_name|
+  `which #{dependency_binary_name}`.empty?
+end
+
+dependency_names = distro_dependencies.values_at(*missing_dependencies)
+
+if !dependency_names.empty?
+  puts "Installing #{dependency_names}..."
+  `sudo apt-get update`
+  # Work Around to conflict with ripgrep
+  # https://github.com/sharkdp/bat/issues/938#issuecomment-646745610
+  bat = dependency_names.delete('bat')
+  ripgrep = dependency_names.delete('ripgrep')
+  `sudo apt install -o Dpkg::Options::="--force-overwrite" bat ripgrep` if [bat, ripgrep].none?
+  batcat_path = '/usr/bin/batcat'
+  bat_path = '/usr/bin/bat'
+  File.symlink(batcat_path, bat_path) if File.exist?(batcat_path) && !File.symlink?(bat)
+
+  `sudo apt-get install #{dependency_names.join(' ')} -y`
+else
+  puts 'All dependencies installed!'
+end
+
+puts "\nChecking yarn installation"
+if `which yarn`.empty?
+  `npm install -g yarn`
+else
+  puts 'Yarn is already installed'
+end
+
+puts "************* IMPORTANT ************,
+Please change the font of your current profile in iTerm2:
+
+In iTerm2 go to:
+
+1. Preferences > Profile
+2. Select the text tab
+3. Change the Regular and Non-ASCII using fonts for Powerline:
+
+Suggest: RobotoMono Nerd Font
+
+Enjoy it!
+Thanks!
+***********************************"

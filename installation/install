@@ -1,0 +1,36 @@
+#!/usr/bin/env ruby
+# frozen_string_literal: true
+
+home_path = File.expand_path('~/')
+vim_path = File.join(home_path, '.vim')
+installation_path = File.join(vim_path, 'installation')
+# source "$INSTALLATION_PATH/fonts_install.sh"
+
+system_name = `uname`.chomp == 'Darwin' ? 'mac' : 'linux'
+
+load "#{installation_path}/#{system_name}_install"
+
+puts "\nInstalling Plug..."
+`vim -es -u vimrc -i NONE -c "PlugInstall" -c "qa"`
+
+# Create symbolic link
+puts "\nLinking vimrc file..."
+home_vimrc_link = File.join(home_path, '.vimrc')
+vimrc_file = File.join(vim_path, 'vimrc')
+File.unlink(home_vimrc_link) if File.symlink?(home_vimrc_link)
+File.symlink(vimrc_file, home_vimrc_link)
+
+puts "************* IMPORTANT ************,
+Please change the font of your current profile in iTerm2:
+
+In iTerm2 go to:
+
+1. Preferences > Profile
+2. Select the text tab
+3. Change the Regular and Non-ASCII using fonts for Powerline:
+
+Suggest: RobotoMono Nerd Font
+
+Enjoy it!
+Thanks!
+***********************************"
