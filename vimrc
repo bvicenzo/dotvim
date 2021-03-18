@@ -381,6 +381,7 @@ if PlugLoaded('nerdtree')
   set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*.pyc,*.db,*.sqlite
   map <leader>nf :NERDTreeFind<CR>
   map <leader>nt :NERDTreeToggle<CR>
+  map <leader>r :NERDTreeFind<CR>
 endif
 
 " Emmet
