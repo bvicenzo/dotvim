@@ -6,6 +6,7 @@ dependencies = {
   node: :node,
   npm: :npm,
   ag: :ag,
+  bat: :bat,
   rg: :ripgrep,
   fzf: :fzf
 }
