@@ -1,0 +1,72 @@
+#!/usr/bin/env ruby
+# frozen_string_literal: true
+
+module SolarGraphInstaller
+  def self.install_command
+    'gem install solargraph'
+  end
+end
+
+module Rvm
+  RUBY_VERSIONS_PATTERN = /ruby-\d\.\d\.\d/.freeze
+
+  class << self
+    def installed?
+      !`which rvm`.empty?
+    end
+
+    def ensure_solar_graph_installed_for_all_ruby_versions
+      rubies.each do |ruby_version|
+        if solargraph_installed_for?(ruby_version)
+          update_solargraph_for(ruby_version)
+        else
+          install_solargraph_for(ruby_version)
+        end
+
+        download_core_documentation_for(ruby_version) if solargraph_installed_for?(ruby_version)
+      end
+    end
+
+    protected
+
+    def rubies
+      `rvm list`.scan(RUBY_VERSIONS_PATTERN)
+    end
+
+    def command_for(ruby_version, command)
+      `rvm #{ruby_version}@global do #{command}`
+    end
+
+    def solargraph_installed_for?(ruby_version)
+      command_for(ruby_version, 'gem list')
+        .lines
+        .map(&:chomp)
+        .any? { |gem_name| gem_name.start_with?('solargraph') }
+    end
+
+    def install_solargraph_for(ruby_version)
+      puts "Installing solargraph gem for #{ruby_version}..."
+      command_for(ruby_version, 'gem install solargraph')
+    end
+
+    def update_solargraph_for(ruby_version)
+      puts "Updating solargraph gem for #{ruby_version}..."
+      command_for(ruby_version, 'gem update solargraph')
+    end
+
+    def download_core_documentation_for(ruby_version)
+      puts "Downloading Core Documentation for #{ruby_version}"
+
+      command_for(ruby_version, 'solargraph download-core')
+    end
+  end
+end
+
+is_rbenv = !`which rbenv`.empty?
+if Rvm.installed?
+  Rvm.ensure_solar_graph_installed_for_all_ruby_versions
+elsif is_rbenv
+  # TODO
+else
+  `gem install solargraph`
+end

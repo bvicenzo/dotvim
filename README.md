@@ -11,7 +11,22 @@
 ## Installation
 
 ```sh
-  ./installation/install.sh
+  ./installation/install
+```
+
+### Note
+
+To [Solargraph](https://github.com/neoclide/coc-solargraph) extension
+works as expected for *Ruby* language is needed to install the gem solargraph.
+
+The bellow script running will ensure that this gems is installed for all ruby versions.
+Is recommended that this script to be runned with regularity and after any new
+Ruby installation.
+
+Suports RVM and Rbenv ruby installation managers.
+
+```sh
+  ./installation/ensure_solargraph
 ```
 
 ## Plugins and Extensions (Coc)
@@ -55,6 +70,7 @@
 - [https://github.com/fannheyward/coc-markdownlint]
 - [https://github.com/iamcco/coc-diagnostic]
 - [https://github.com/neoclide/coc-snippets]
+- [https://github.com/neoclide/coc-solargraph]
 
 ### Commenter
 
