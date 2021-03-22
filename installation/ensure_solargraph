@@ -1,0 +1,95 @@
+#!/usr/bin/env ruby
+# frozen_string_literal: true
+
+# Methods to install solargraph gem on any Ruby Version Manager
+module RubyVersionManager
+  def ensure_solar_graph_installed_for_all_ruby_versions
+    rubies.each do |ruby_version|
+      if solargraph_installed_for?(ruby_version)
+        update_solargraph_for(ruby_version)
+      else
+        install_solargraph_for(ruby_version)
+      end
+
+      download_core_documentation_for(ruby_version) if solargraph_installed_for?(ruby_version)
+    end
+  end
+
+  protected
+
+  def solargraph_installed_for?(ruby_version)
+    command_for(ruby_version, 'gem list')
+      .lines
+      .map(&:chomp)
+      .any? { |gem_name| gem_name.start_with?('solargraph') }
+  end
+
+  def install_solargraph_for(ruby_version)
+    puts "Installing solargraph gem for #{ruby_version}..."
+    command_for(ruby_version, 'gem install solargraph')
+  end
+
+  def update_solargraph_for(ruby_version)
+    puts "Updating solargraph gem for #{ruby_version}..."
+    command_for(ruby_version, 'gem update solargraph')
+  end
+
+  def download_core_documentation_for(ruby_version)
+    puts "Downloading Core Documentation for #{ruby_version}"
+    command_for(ruby_version, 'solargraph download-core')
+  end
+end
+
+# Methods to install solargraph gem on any RVM
+module Rvm
+  extend RubyVersionManager
+
+  RUBY_VERSIONS_PATTERN = /ruby-\d\.\d\.\d/.freeze
+
+  class << self
+    def installed?
+      !`which rvm`.empty?
+    end
+
+    protected
+
+    def rubies
+      `rvm list`.scan(RUBY_VERSIONS_PATTERN)
+    end
+
+    def command_for(ruby_version, command)
+      `rvm #{ruby_version}@global do #{command}`
+    end
+  end
+end
+
+# Methods to install solargraph gem on any Rbenv
+module Rbenv
+  extend RubyVersionManager
+
+  RUBY_VERSIONS_PATTERN = /\d\.\d\.\d/.freeze
+
+  class << self
+    def installed?
+      !`which rbenv`.empty?
+    end
+
+    protected
+
+    def rubies
+      `rbenv versions`.scan(RUBY_VERSIONS_PATTERN)
+    end
+
+    def command_for(ruby_version, command)
+      `PATH="$(rbenv root)/versions/#{ruby_version}/bin:$PATH" #{command}`
+    end
+  end
+end
+
+if Rvm.installed?
+  Rvm.ensure_solar_graph_installed_for_all_ruby_versions
+elsif Rbenv.installed?
+  Rbenv.ensure_solar_graph_installed_for_all_ruby_versions
+else
+  `gem install solargraph`
+end
