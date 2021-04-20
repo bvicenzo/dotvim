@@ -53,6 +53,7 @@ Plug 'tpope/vim-fugitive'
 " Refactoring
 Plug 'tpope/vim-surround'
 Plug 'Raimondi/delimitMate'
+Plug 'AndrewRadev/splitjoin.vim'
 
 " Ruby
 Plug 'tpope/vim-rails'
