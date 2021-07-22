@@ -84,6 +84,12 @@ set linebreak
 " set no word rap line
 set nowrap
 
+" highlight N columns
+set cc=120
+
+" show invisibles
+set list
+
 " Intuitive backspacing
 set backspace=indent,eol,start
 
@@ -409,7 +415,7 @@ let g:fzf_preview_use_dev_icons = 1
 let g:fzf_preview_dev_icon_prefix_string_length = 3
 let g:fzf_preview_quit_map = 0
 map <leader>p :CocCommand fzf-preview.ProjectFiles<CR>
-map <leader>be :CocCommand fzf-preview.AllBuffers<CR>
+map <leader>be :CocCommand fzf-preview.Buffers<CR>
 
 " TComment
 map <leader>c<space> ,__<CR>
@@ -426,6 +432,7 @@ map <leader>gp :CocCommand git.push<CR>
 
 " Yanking
 nnoremap <silent> <space>y  :<C-u>CocList -A --normal yank<cr>
+map <leader>yc :CocCommand yank.clean<CR>
 
 " Swagger
 " tips: add a (slightly) short command
