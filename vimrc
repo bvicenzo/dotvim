@@ -54,6 +54,7 @@ Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-surround'
 Plug 'Raimondi/delimitMate'
 Plug 'AndrewRadev/splitjoin.vim'
+Plug 'victormours/ruby-memoize.vim'
 
 " Ruby
 Plug 'tpope/vim-rails'
@@ -416,8 +417,12 @@ map <leader>c<space> ,__<CR>
 " Coc Extensions Configuration
 
 " Git
+map <leader>tg :CocCommand git.toggleGutters<CR>
 map <leader>of :CocCommand git.browserOpen<CR>
+map <leader>cu :CocCommand git.copyUrl<CR>
 map <leader>sc :CocCommand git.showCommit<CR>
+map <leader>dc :CocCommand git.diffCached<CR>
+map <leader>gp :CocCommand git.push<CR>
 
 " Yanking
 nnoremap <silent> <space>y  :<C-u>CocList -A --normal yank<cr>
