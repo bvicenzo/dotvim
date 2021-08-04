@@ -33,107 +33,105 @@ Suports RVM and Rbenv ruby installation managers.
 
 ### Coc Vim
 
-- [https://github.com/neoclide/coc.nvim]
+- [coc.nvim](https://github.com/neoclide/coc.nvim)
 
 ### Themes
 
-- [https://github.com/vim-airline/vim-airline]
-- [https://github.com/vim-airline/vim-airline-themes]
-- [https://github.com/dracula/vim]
-- [https://github.com/preservim/nerdtree]
-- [https://github.com/ryanoasis/vim-devicons]
+- [vim-airline](https://github.com/vim-airline/vim-airline)
+- [vim-airline-themes](https://github.com/vim-airline/vim-airline-themes)
+- [dracula/vim](https://github.com/dracula/vim)
+- [nerdtree](https://github.com/preservim/nerdtree)
+- [vim-devicons](https://github.com/ryanoasis/vim-devicons)
 
 ### Buffer
 
-- [https://github.com/yuki-yano/fzf-preview.vim]
+- [fzv-preview.vim](https://github.com/yuki-yano/fzf-preview.vim)
 
 ### Git
 
-- [https://github.com/tpope/vim-fugitive]
-- [https://github.com/tpope/vim-rhubarb]
-- [https://github.com/neoclide/coc-git]
+- [vim-fugitive](https://github.com/tpope/vim-fugitive)
+- [vim-rhubarb](https://github.com/tpope/vim-rhubarb)
+- [coc-git](https://github.com/neoclide/coc-git)
 
 ### Finding
 
-- [https://github.com/junegunn/fzf]
-- [https://github.com/junegunn/fzf.vim]
-- [https://github.com/yuki-yano/fzf-preview.vim]
-- [https://github.com/yuki-yano/fzf-preview.vim]
-- [https://github.com/andymass/vim-matchup]
+- [fzf](https://github.com/junegunn/fzf)
+- [fzf.vim](https://github.com/junegunn/fzf.vim)
+- [fzf-preview.vim](https://github.com/yuki-yano/fzf-preview.vim)
+- [vim-matchup](https://github.com/andymass/vim-matchup)
 
 ### Analyzing
 
-- [https://github.com/majutsushi/tagbar]
-- [https://github.com/dense-analysis/ale]
-- [https://github.com/Yggdroot/indentLine]
-- [https://github.com/sheerun/vim-polyglot]
-- [https://github.com/fannheyward/coc-markdownlint]
-- [https://github.com/iamcco/coc-diagnostic]
-- [https://github.com/neoclide/coc-snippets]
-- [https://github.com/neoclide/coc-solargraph]
+- [tagbar](https://github.com/majutsushi/tagbar)
+- [ale](https://github.com/dense-analysis/ale)
+- [indentLine](https://github.com/Yggdroot/indentLine)
+- [vim-polyglot](https://github.com/sheerun/vim-polyglot)
+- [coc-markdownlint](https://github.com/fannheyward/coc-markdownlint)
+- [coc-diagnostic](https://github.com/iamcco/coc-diagnostic)
+- [coc-sippets](https://github.com/neoclide/coc-snippets)
+- [coc-solargraph](https://github.com/neoclide/coc-solargraph)
 
 ### Commenter
 
-- [https://github.com/tomtom/tcomment_vim]
+- [tcomment_vim](https://github.com/tomtom/tcomment_vim)
 
 ### Documentation Generation
 
-- [https://github.com/kkoomen/vim-doge]
+- [vim-doge](https://github.com/kkoomen/vim-doge)
 
 ### Refactoring
 
-- [https://github.com/AndrewRadev/splitjoin.vim]
-- [https://github.com/terryma/vim-multiple-cursors]
-- [https://github.com/tpope/vim-surround]
-- [https://github.com/Raimondi/delimitMate]
+- [splitjoin.vim](https://github.com/AndrewRadev/splitjoin.vim)
+- [vim-multiple-cursors](https://github.com/terryma/vim-multiple-cursors)
+- [vim-surround](https://github.com/tpope/vim-surround)
+- [delimitMate](https://github.com/Raimondi/delimitMate)
 
 ### Yanking
 
-- [https://github.com/neoclide/coc-yank]
+- [coc-yank](https://github.com/neoclide/coc-yank)
 
 ### Programming Languages
 
 #### HTML
 
-- [https://github.com/mattn/emmet-vim]
-- [https://github.com/neoclide/coc-emmet]
-- [https://github.com/neoclide/coc-html]
+- [emmet-vim](https://github.com/mattn/emmet-vim)
+- [coc-emmet](https://github.com/neoclide/coc-emmet)
+- [coc-html](https://github.com/neoclide/coc-html)
 
 #### Javascript
 
-- [https://github.com/mattn/emmet-vim]
-- [https://github.com/neoclide/coc-emmet]
-- [https://github.com/neoclide/coc-json]
-- [https://github.com/neoclide/coc-tsserver]
+- [coc-json](https://github.com/neoclide/coc-json)
+- [coc-tsserver](https://github.com/neoclide/coc-tsserver)
 
 #### CSS
 
-- [https://github.com/neoclide/coc-css]
-- [https://github.com/neoclide/coc-highlight]
-- [https://github.com/neoclide/coc-stylelint]
+- [coc-css](https://github.com/neoclide/coc-css)
+- [coc-highlight](https://github.com/neoclide/coc-highlight)
+- [coc-stylelint](https://github.com/neoclide/coc-stylelint)
+- [coc-tailwindcss](https://github.com/iamcco/coc-tailwindcss)
 
 #### Ruby
 
-- [https://github.com/tpope/vim-rails]
-- [https://github.com/tpope/vim-rake]
-- [https://github.com/tpope/vim-projectionist]
-- [https://github.com/thoughtbot/vim-rspec]
-- [https://github.com/ecomba/vim-ruby-refactoring]
-- [https://github.com/victormours/ruby-memoize.vim]
+- [vim-rails](https://github.com/tpope/vim-rails)
+- [vim-rake](https://github.com/tpope/vim-rake)
+- [vim-projectionist](https://github.com/tpope/vim-projectionist)
+- [vim-rspec](https://github.com/thoughtbot/vim-rspec)
+- [vim-ruby-refactoring](https://github.com/ecomba/vim-ruby-refactoring)
+- [ruby-memoize](https://github.com/victormours/ruby-memoize.vim)
 
 #### YAML
 
-- [https://github.com/neoclide/coc-yaml]
+- [coc-yaml](https://github.com/neoclide/coc-yaml)
 
 #### Swagger
 
-- [https://github.com/haishanh/coc-swagger]
+- [coc-swagger](https://github.com/haishanh/coc-swagger)
 
 #### Shell Scripting
 
-- [https://github.com/josa42/coc-sh]
+- [coc-sh](https://github.com/josa42/coc-sh)
 
 #### Tmate/Tmux
 
-- [https://github.com/tmux-plugins/vim-tmux-focus-events]
-- [https://github.com/roxma/vim-tmux-clipboard]
+- [vim-tmux-focus-events](https://github.com/tmux-plugins/vim-tmux-focus-events)
+- [vim-tmux-clipboard](https://github.com/roxma/vim-tmux-clipboard)
