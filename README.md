@@ -85,6 +85,7 @@ Suports RVM and Rbenv ruby installation managers.
 - [vim-multiple-cursors](https://github.com/terryma/vim-multiple-cursors)
 - [vim-surround](https://github.com/tpope/vim-surround)
 - [delimitMate](https://github.com/Raimondi/delimitMate)
+- [vim-repeat](https://github.com/tpope/vim-repeat)
 
 ### Yanking
 

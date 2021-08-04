@@ -55,6 +55,7 @@ Plug 'tpope/vim-surround'
 Plug 'Raimondi/delimitMate'
 Plug 'AndrewRadev/splitjoin.vim'
 Plug 'victormours/ruby-memoize.vim'
+Plug 'tpope/vim-repeat'
 
 " Ruby
 Plug 'tpope/vim-rails'
