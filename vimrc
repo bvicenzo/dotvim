@@ -184,7 +184,8 @@ let g:coc_global_extensions = [
         \'coc-yank',
         \'coc-yaml',
         \'coc-swagger',
-        \'coc-solargraph'
+        \'coc-solargraph',
+        \'coc-tailwindcss'
 	\]
 
 " Coc Basics
