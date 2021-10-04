@@ -40,6 +40,7 @@ Plug 'tomtom/tcomment_vim'
 
 " Completion
 Plug 'mattn/emmet-vim'
+Plug 'honza/vim-snippets'
 
 " Finding
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
@@ -186,7 +187,8 @@ let g:coc_global_extensions = [
         \'coc-yaml',
         \'coc-swagger',
         \'coc-solargraph',
-        \'coc-tailwindcss'
+        \'coc-tailwindcss',
+        \'coc-snippets'
 	\]
 
 " Coc Basics
