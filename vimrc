@@ -415,6 +415,7 @@ endif
 
 " FZF
 " map <leader>f :FZF<CR>
+let $FZF_PREVIEW_PREVIEW_BAT_THEME = 'GitHub' 
 let g:fzf_preview_use_dev_icons = 1
 let g:fzf_preview_dev_icon_prefix_string_length = 3
 let g:fzf_preview_quit_map = 0
