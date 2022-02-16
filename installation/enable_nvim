@@ -1,0 +1,37 @@
+#!/usr/bin/env ruby
+# frozen_string_literal: true
+
+puts 'Enable NVim'
+
+config_dir_path = File.join(Dir.home, '.config/')
+
+if Dir.exist?(config_dir_path)
+  puts "Skip creating config dir #{config_dir_path}"
+else
+  puts "Creating config dir at #{config_dir_path}"
+  Dir.mkdir(config_dir_path)
+end
+
+nvim_dir_path = File.join(config_dir_path, 'nvim/')
+
+if Dir.exist?(nvim_dir_path)
+  puts "Skip creating nvim dir #{nvim_dir_path}"
+else
+  puts "Creating nvim dir at #{nvim_dir_path}"
+  Dir.mkdir(nvim_dir_path)
+end
+
+nvim_init_file_path = File.join(nvim_dir_path, 'init.vim')
+
+if File.exist?(nvim_init_file_path)
+  puts "Skip creating nvim init file path #{nvim_init_file_path}"
+else
+  puts "Creating Nvim init file at #{nvim_init_file_path}"
+  File.open(nvim_init_file_path, 'w+') do |file|
+    file.puts 'set runtimepath^=~/.vim runtimepath+=~/.vim/after'
+    file.puts 'let &packpath = &runtimepath'
+    file.print 'source ~/.vimrc'
+  end
+end
+
+puts 'NVim configuration finished.'
