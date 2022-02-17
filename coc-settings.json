@@ -1,3 +1,4 @@
 {
-  "git.addGBlameToVirtualText": true
+  "git.addGBlameToVirtualText": true,
+  "git.enableGutters": true
 }
