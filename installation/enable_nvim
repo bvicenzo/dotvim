@@ -34,4 +34,14 @@ else
   end
 end
 
+coc_settings_original_path = File.join(Dir.home, '.vim/coc-settings.json')
+coc_settings_destination_path = File.join(nvim_dir_path, 'coc-settings.json')
+
+if File.exist?(coc_settings_destination_path)
+  puts "Skip creating coc config file path #{coc_settings_destination_path}"
+else
+  puts "Creating coc config file path #{coc_settings_destination_path}"
+  File.symlink(coc_settings_original_path, coc_settings_destination_path)
+end
+
 puts 'NVim configuration finished.'
