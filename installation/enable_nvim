@@ -21,17 +21,14 @@ else
   Dir.mkdir(nvim_dir_path)
 end
 
+nvim_init_file_original_path = File.join(Dir.home, '.vim/nvim/init.vim')
 nvim_init_file_path = File.join(nvim_dir_path, 'init.vim')
 
 if File.exist?(nvim_init_file_path)
   puts "Skip creating nvim init file path #{nvim_init_file_path}"
 else
   puts "Creating Nvim init file at #{nvim_init_file_path}"
-  File.open(nvim_init_file_path, 'w+') do |file|
-    file.puts 'set runtimepath^=~/.vim runtimepath+=~/.vim/after'
-    file.puts 'let &packpath = &runtimepath'
-    file.print 'source ~/.vimrc'
-  end
+  File.symlink(nvim_init_file_original_path, nvim_init_file_path)
 end
 
 coc_settings_original_path = File.join(Dir.home, '.vim/coc-settings.json')
