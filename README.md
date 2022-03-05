@@ -103,6 +103,7 @@ Suports RVM and Rbenv ruby installation managers.
 
 - [coc-json](https://github.com/neoclide/coc-json)
 - [coc-tsserver](https://github.com/neoclide/coc-tsserver)
+- [vim-jsondoc](https://github.com/kevinoid/vim-jsonc)
 
 #### CSS
 
