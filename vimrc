@@ -106,6 +106,7 @@ set fileformats=unix,mac,dos
 
 " highlight cursor line
 set cursorline
+set guicursor+=i:block-iCursor
 
 " highlight matches as you type
 set incsearch 
