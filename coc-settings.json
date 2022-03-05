@@ -1,5 +1,6 @@
 {
   // Git
+  "git.enableGutters": true,
   "git.addGBlameToVirtualText": true,
-  "git.enableGutters": true
+  "git.showCommitInFloating": true
 }
