@@ -458,7 +458,7 @@ set statusline^=%{get(g:,'coc_git_status','')}%{get(b:,'coc_git_status','')}%{ge
 " run the above commands only if vim is compiled with autocmd
 if has("autocmd")
   autocmd BufWritePost .vimrc source $MYVIMRC " apply .vimrc settings on save
-  autocmd BufWritePre *.rb,*.arb,*.erb,*.html,*.js,*.css,*.php,*.py,*.json :call <SID>StripTrailingWhitespaces() " remove trailing white spaces before saving (only in specified filetypes)
+  autocmd BufWritePre *.rb,*.arb,*.erb,*.html,*.js,*.css,*.php,*.py,*.json,*axlsx :call <SID>StripTrailingWhitespaces() " remove trailing white spaces before saving (only in specified filetypes)
 endif
 
 " function to remove trailing white space (while saving cursor position)
@@ -475,3 +475,11 @@ function! <SID>StripTrailingWhitespaces()
   let @/=_s
   call cursor(l, c)
 endfunction
+
+" Ruby Files
+
+" Excel templates (axsls)
+au BufRead,BufNewFile *.axlsx setf ruby
+"
+" Active Admin templates (arb)
+au BufRead,BufNewFile *.arb setf ruby
