@@ -57,13 +57,16 @@ Plug 'Raimondi/delimitMate'
 Plug 'AndrewRadev/splitjoin.vim'
 Plug 'victormours/ruby-memoize.vim'
 Plug 'tpope/vim-repeat'
+Plug 'terryma/vim-multiple-cursors' " Tutorial: https://www.youtube.com/watch?v=YwMgnmZNWXA
 
 " Ruby
 Plug 'tpope/vim-rails'
 Plug 'tpope/vim-projectionist'
 Plug 'ecomba/vim-ruby-refactoring'
-Plug 'ecomba/vim-ruby-refactoring'
 Plug 'victormours/ruby-memoize.vim'
+
+" JSON
+Plug 'kevinoid/vim-jsonc'
 
 " Tmate/Tmux
 Plug 'tmux-plugins/vim-tmux-focus-events'
