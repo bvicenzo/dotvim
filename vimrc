@@ -368,6 +368,16 @@ function! PlugLoaded(name)
     return (has_key(g:plugs, a:name) && isdirectory(g:plugs[a:name].dir))
 endfunction
 
+" if !exists("g:os")
+"     if has("win64") || has("win32") || has("win16")
+"         let g:os = "Windows"
+"     elseif !empty(system("grep -F -i 'Microsoft' '/proc/version' 2>/dev/null"))
+"       let g:os = "WSL"
+"     else
+"         let g:os = substitute(system('uname'), '\n', '', '')
+"     endif
+" endif
+
 if PlugLoaded('vim-airline-themes')
   " AirLine
   let g:airline_theme='violet'
@@ -480,6 +490,9 @@ endfunction
 
 " Excel templates (axsls)
 au BufRead,BufNewFile *.axlsx setf ruby
+
+" PDF templates
+au BufRead,BufNewFile *.pdf.erb setf ruby
 "
 " Active Admin templates (arb)
 au BufRead,BufNewFile *.arb setf ruby
